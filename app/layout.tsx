@@ -4,6 +4,7 @@ import { fontMono } from "@/config/fonts";
 import { Raleway } from "next/font/google";
 import clsx from "clsx";
 import NavbarComponent from "@/components/Navbar";
+import { SessionProvider } from "next-auth/react";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -27,8 +28,10 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning>
       <head />
       <body className={raleway.className}>
-        <NavbarComponent />
-        {children}
+        <SessionProvider>
+          <NavbarComponent />
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );
