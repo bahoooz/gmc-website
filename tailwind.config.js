@@ -10,8 +10,6 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        // Ici, vous pouvez définir vos propres points d'arrêt pour les media queries
-        mdlarge: "1024px",
         smallsm: "480px"
       },
     },

@@ -4,6 +4,7 @@
 import { Button } from "@nextui-org/button";
 import { Image } from "@nextui-org/image";
 import { Tooltip } from "@nextui-org/tooltip";
+import { Divider } from "@nextui-org/divider";
 import {
   Code,
   BracketsCurly,
@@ -16,7 +17,7 @@ import {
   EnvelopeSimple,
   Warning,
   ArrowDown,
-  UsersThree
+  UsersThree,
 } from "@phosphor-icons/react";
 import Link from "next/link";
 
@@ -108,14 +109,12 @@ export default function Home() {
           </video>
         </div>
       </header>
-      <section id="first_content" className="bg-gray-800 py-28">
-        <div className="flex flex-col-reverse mdlarge:flex-row justify-center items-center xl:items-end gap-16 mdlarge:gap-32 xl:gap-52">
-          <div className="px-12 smallsm:px-0 smallsm:w-96 sm:w-[580px] xl:w-[550px] text-white">
-            <div className="text-center justify-center mdlarge:justify-start flex flex-col smallsm:flex-row smallsm:items-end gap-6 mb-14">
+      <section id="first_content" className="bg-gray-800 py-12 lg:py-28">
+        <div className="flex flex-col-reverse lg:flex-row justify-center items-center xl:items-end gap-16 lg:gap-32 xl:gap-52">
+          <div className="px-12 smallsm:px-0 smallsm:w-96 sm:w-[520px] xl:w-[550px] text-white">
+            <div className="text-center justify-center lg:justify-start flex flex-col smallsm:flex-row smallsm:items-end gap-6 mb-14">
               <span className="text-violet-600 text-6xl">1.</span>
-              <h2
-                className="text-3xl smallsm:text-4xl xl:text-5xl"
-              >
+              <h2 className="text-3xl smallsm:text-4xl xl:text-5xl">
                 Qui sommes-nous
               </h2>
             </div>
@@ -171,7 +170,7 @@ export default function Home() {
                 </span>{" "}
                 :)
               </p>
-              <div className="flex justify-center mdlarge:justify-start items-center gap-6 mt-8">
+              <div className="flex justify-center lg:justify-start items-center gap-6 mt-8">
                 <div className="flex gap-6">
                   <Link
                     className="w-10 h-10 bg-violet-600 rounded-full flex justify-center items-center hover:scale-110 transition-all"
@@ -214,26 +213,26 @@ export default function Home() {
                     </Tooltip>
                   </Link>
                 </div>
-                <div className="hidden mdlarge:flex gap-7">
-                  <div className="h-1 w-7 xl:w-9 bg-violet-600"></div>
-                  <div className="h-1 w-7 xl:w-9 bg-violet-600"></div>
-                  <div className="h-1 w-7 xl:w-9 bg-violet-600"></div>
-                  <div className="h-1 w-7 xl:w-9 bg-violet-600"></div>
-                  <div className="h-1 w-7 xl:w-9 bg-violet-600"></div>
-                  <div className="h-1 w-7 xl:w-9 bg-violet-600"></div>
+                <div className="hidden lg:flex gap-7">
+                  <div className="h-1 w-[31px] xl:w-9 bg-violet-600"></div>
+                  <div className="h-1 w-[31px] xl:w-9 bg-violet-600"></div>
+                  <div className="h-1 w-[31px] xl:w-9 bg-violet-600"></div>
+                  <div className="h-1 w-[31px] xl:w-9 bg-violet-600"></div>
+                  <div className="h-1 w-[31px] xl:w-9 bg-violet-600"></div>
+                  <div className="h-1 w-[31px] xl:w-9 bg-violet-600"></div>
                 </div>
               </div>
             </div>
           </div>
           <div>
             <Image
-              className="hidden mdlarge:flex w-auto h-[450px] mdlarge:h-[400px] xl:h-[550px]"
+              className="hidden lg:flex w-auto h-[450px] lg:h-[400px] xl:h-[550px]"
               isBlurred
               src="/img_section_1.png"
               alt="image section"
             />
             <Image
-              className="flex mdlarge:hidden h-auto w-80 smallsm:w-96 sm:w-[450px]"
+              className="flex lg:hidden h-auto w-80 smallsm:w-96 sm:w-[450px]"
               isBlurred
               src="/img_section_1_mobile.png"
               alt="image section"
@@ -241,21 +240,23 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-gray-800 py-28">
+      <section className="bg-gray-800 py-12 lg:py-28">
         <div className="hidden md:flex justify-center items-center gap-32 xl:gap-48">
           <div className="text-white">
-            <div className="flex flex-col justify-center text-center mdlarge:justify-start mdlarge:text-start smallsm:flex-row smallsm:items-end gap-6 mb-5">
+            <div className="flex flex-col justify-center text-center lg:justify-start lg:text-start smallsm:flex-row smallsm:items-end gap-6 mb-5">
               <span className="text-blue-400 text-6xl">2.</span>
               <h2 className="text-3xl smallsm:text-4xl xl:text-5xl">
                 Comment ça marche ?
               </h2>
             </div>
-            <p className="text-center mdlarge:text-start mx-[8%] md:mx-0 mb-9 px-7 md:px-0">
+            <p className="text-center lg:text-start mx-[8%] md:mx-0 mb-9 px-7 md:px-0">
               Vous l’avez bien compris Garry’s Mod Creators est une solution
-              vous permettant de <br className="hidden md:block" /> créer du contenu autour du célèbre jeu Garry’s
-              Mod
+              vous permettant de <br className="hidden md:block" /> créer du
+              contenu autour du célèbre jeu Garry’s Mod
             </p>
-            <h3 className="px-6 sm:px-0 text-center mdlarge:text-start text-blue-400 underline underline-offset-4 text-xl mb-9">Mais alors comment on passe commande concrètement ?</h3>
+            <h3 className="px-6 sm:px-0 text-center lg:text-start text-blue-400 underline underline-offset-4 text-xl mb-9">
+              Mais alors comment on passe commande concrètement ?
+            </h3>
             <div className="mx-10 w-fit sm:w-[500px] sm:mx-auto md:mx-0 md:w-[630px] xl:w-[680px] border-2 border-blue-400 p-5 rounded-2xl">
               <div className="flex-col text-center sm:text-start sm:flex-row flex items-center gap-3 mb-4">
                 <Warning size={32} className="text-blue-400" />
@@ -265,47 +266,206 @@ export default function Home() {
               </div>
               <p className="text-center w-fit sm:text-start">
                 Pour passer commande sur le site,{" "}
-                <span className="text-blue-400 underline underline-offset-4">vous devez obligatoirement être sur le discord</span>, car
-                c’est là bas que vous serez mit en relation avec notre équipe
-                qui se chargera de mener a bien la réalisation de votre
+                <span className="text-blue-400 underline underline-offset-4">
+                  vous devez obligatoirement être sur le discord
+                </span>
+                , car c’est là bas que vous serez mit en relation avec notre
+                équipe qui se chargera de mener a bien la réalisation de votre
                 commande, vous pouvez rejoindre directement le discord ici.
               </p>
             </div>
             <div className="flex justify-center">
-            <ArrowDown size={54} className="text-blue-400 my-8" weight="light" />
+              <ArrowDown
+                size={54}
+                className="text-blue-400 my-8"
+                weight="light"
+              />
             </div>
-            <p className="text-center mdlarge:text-start mx-auto md:mx-0 md:w-[630px] xl:w-[680px] mb-9">
+            <p className="text-center lg:text-start mx-auto md:mx-0 md:w-[630px] xl:w-[680px] mb-9">
               Une fois que vous êtes bien sur le discord de GMC, rien de plus
-              simple. Vous devez vous <span className="text-blue-400 underline underline-offset-4">inscrire</span> sur notre site, rendez-vous
-              ensuite sur la page avec tous les services disponibles, puis
-              choississez ce qui correspond le plus a votre besoin et
-              laissez-vous guider 😀
+              simple. Vous devez vous{" "}
+              <span className="text-blue-400 underline underline-offset-4">
+                inscrire
+              </span>{" "}
+              sur notre site, rendez-vous ensuite sur la page avec tous les
+              services disponibles, puis choississez ce qui correspond le plus a
+              votre besoin et laissez-vous guider 😀
             </p>
             <div className="flex justify-center">
-            <Button className="w-[500px] md:w-full text-white bg-blue-600" as={Link} href="/shop">
-              <Basket size={24} /> Découvrir la boutique
-            </Button>
+              <Button
+                className="w-[500px] md:w-full text-white bg-blue-600"
+                as={Link}
+                href="/shop"
+              >
+                <Basket size={24} /> Découvrir la boutique
+              </Button>
             </div>
           </div>
-          <div className="hidden mdlarge:flex flex-col  lg:items-center xl:items-end xl:justify-center gap-5">
+          <div className="hidden lg:flex flex-col  lg:items-center xl:items-end xl:justify-center gap-5">
             <div className="text-violet-400 flex lg:flex-col-reverse xl:flex-row items-center gap-7">
               <span className="text-sm">Rejoindre le Discord</span>
-              <div className="w-24 h-24 border-dashed border-3 rounded-full flex justify-center items-center border-violet-400"><DiscordLogo size={56} weight="light" /></div>
+              <div className="w-24 h-24 border-dashed border-3 rounded-full flex justify-center items-center border-violet-400">
+                <DiscordLogo size={56} weight="light" />
+              </div>
             </div>
             <div className="h-32 border border-blue-400 border-dashed xl:mr-12 "></div>
             <div className="text-orange-400 flex lg:flex-col-reverse xl:flex-row items-center gap-7">
               <span className="text-sm">Choississez dans la boutique</span>
-              <div className="w-24 h-24 border-dashed border-3 rounded-full flex justify-center items-center border-orange-400"><Basket size={56} weight="light" /></div>
+              <div className="w-24 h-24 border-dashed border-3 rounded-full flex justify-center items-center border-orange-400">
+                <Basket size={56} weight="light" />
+              </div>
             </div>
             <div className="h-32 border border-blue-400 border-dashed xl:mr-12"></div>
             <div className="text-red-400 flex lg:flex-col-reverse xl:flex-row items-center gap-7">
               <span className="text-sm">On s’occupe du reste</span>
-              <div className="w-24 h-24 border-dashed border-3 rounded-full flex justify-center items-center border-red-400"><UsersThree size={56} weight="light" /></div>
+              <div className="w-24 h-24 border-dashed border-3 rounded-full flex justify-center items-center border-red-400">
+                <UsersThree size={56} weight="light" />
+              </div>
             </div>
           </div>
         </div>
-        <div className="md:hidden h-7 bg-red-300">
-
+        <div className="md:hidden text-white text-center">
+          <div className="flex flex-col items-center gap-6 mb-6">
+            <span className="text-blue-400 text-6xl">2.</span>
+            <h2 className="text-3xl mb-5 px-2">Comment ça marche ?</h2>
+          </div>
+          <p className="mb-9 px-8">
+            Vous l’avez bien compris Garry’s Mod Creators est une solution vous
+            permettant de créer du contenu autour du célèbre jeu Garry’s Mod
+          </p>
+          <h3 className="mb-9 px-8 text-blue-400 text-xl">
+            Mais alors comment on passe commande concrètement ?
+          </h3>
+          <div className="border-2 border-blue-600 mx-8 p-5 rounded-2xl">
+            <div className="flex flex-col items-center gap-3 mb-4">
+              <Warning size={32} className="text-blue-400" />
+              <h3 className="text-xl">
+                C’est très simple mais avant tout voici une petite précision :
+              </h3>
+            </div>
+            <p>
+              Pour passer commande sur le site,
+              <span className="text-blue-400 underline underline-offset-4">
+                {" "}
+                vous devez obligatoirement être sur le discord
+              </span>
+              , car c’est là bas que vous serez mit en relation avec notre
+              équipe qui se chargera de mener a bien la réalisation de votre
+              commande, vous pouvez rejoindre directement le discord ici.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <ArrowDown size={54} className="my-8 text-blue-400" />
+          </div>
+          <p className="px-8 mb-9">
+            Une fois que vous êtes bien sur le discord de GMC, rien de plus
+            simple. Vous devez vous{" "}
+            <span className="text-blue-400 underline underline-offset-4">
+              inscrire
+            </span>{" "}
+            sur notre site, rendez-vous ensuite sur la page avec tous les
+            services disponibles, puis choississez ce qui correspond le plus a
+            votre besoin et laissez-vous guider 😀
+          </p>
+          <div className="px-8">
+            <Button
+              className="w-full flex gap-3 bg-blue-600 text-white"
+              as={Link}
+              href="/shop"
+            >
+              <Basket size={24} /> Découvrir la boutique
+            </Button>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white py-24 lg:py-28">
+        <div>
+          <div className="flex flex-col items-center mb-14 gap-6 md:mb-24 md:flex-row md:items-end md:justify-center lg:-ml-[360px] xl:-ml-[410px] xl:mb-28 2xl:mb-32">
+            <span className="text-red-400 text-6xl">3.</span>
+            <h2 className="text-3xl mb-5 px-2 text-center md:mb-0 md:text-4xl xl:text-5xl">
+              Pourquoi nous faire confiance ?
+            </h2>
+          </div>
+          <div className="flex flex-col gap-20 px-8 smallsm:items-center md:gap-28 lg:flex-row lg:flex-wrap lg:justify-center xl:gap-16 xl:flex-nowrap 2xl:gap-36">
+            <div className="flex gap-8">
+              <div className="flex flex-col items-center gap-5 xl:flex-col-reverse">
+                <span className="text-4xl text-red-400">1</span>
+                <div className="h-96 w-20 bg-red-400 rounded-xl"></div>
+              </div>
+              <div className="flex flex-col gap-5 mt-16 smallsm:max-w-80 xl:max-w-64 xl:mt-0 xl:mb-16 xl:justify-end">
+                <h4 className="underline underline-offset-4 text-xl">
+                  Une prise en charge de A à Z de tous nos clients.
+                </h4>
+                <p className="text-sm smallsm:text-base md:text-lg xl:text-base">
+                  Nous avons à coeur de délivrer la meilleure expérience
+                  possible pour nos clients, c’est pour cela que nous prenons en
+                  charge nos clients du début de leur commande, jusqu’à que la
+                  commande soit 100% terminée et que notre client est satisfait.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-8 xl:mb-28">
+              <div className="flex flex-col items-center gap-5">
+                <span className="text-4xl text-blue-400">2</span>
+                <div className="h-96 w-20 bg-blue-400 rounded-xl"></div>
+              </div>
+              <div className="flex flex-col gap-5 mt-16 smallsm:max-w-80 xl:max-w-64">
+                <h4 className="underline underline-offset-4 text-xl">
+                  Une équipe compétente.
+                </h4>
+                <p className="text-sm smallsm:text-base md:text-lg xl:text-base">
+                  Avoir une équipe compétente est extrêmement important pour
+                  nous. Nous faisons en sorte de proposer les services que notre
+                  équipe maîtrise afin de délivrer une solution qualitative à
+                  nos clients.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-8">
+              <div className="flex flex-col items-center gap-5 xl:flex-col-reverse">
+                <span className="text-4xl text-green-300">3</span>
+                <div className="h-96 w-20 bg-green-300 rounded-xl"></div>
+              </div>
+              <div className="flex flex-col gap-5 mt-16 smallsm:max-w-80 xl:max-w-64 xl:mt-0 xl:mb-16 xl:justify-end">
+                <h4 className="underline underline-offset-4 text-xl">
+                  Des retours positifs.
+                </h4>
+                <p className="text-sm smallsm:text-base md:text-lg xl:text-base">
+                  Les retours de nos clients sont extrêmement importants car ils
+                  nous permettent de vérifier si notre méthode pour réaliser vos
+                  commandes fonctionne, nous écouterons toujours nos clients car
+                  c’est grâce à eux que nous pouvons continuer à améliorer GMC
+                  chaque jour. Et jusqu’à présent, nos clients sont toujours
+                  satisfait de notre solution.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-24 lg:py-28">
+        <div>
+          <Divider />
+          <div className="text-center lg:py-8">
+            <div className="my-16 px-5 sm:relative">
+            <h2 className="text-2xl underline decoration-green-300 decoration-4 underline-offset-4 sm:text-3xl sm:no-underline lg:text-4xl">Vous êtes convaincu ? Rejoignez-nous !</h2>
+            <div className="hidden absolute w-[550px] h-5 bg-green-300 translate-x-[-50%] left-1/2 -bottom-1 sm:flex -z-10 lg:w-[670px] lg:bottom-[-6px] "></div>
+            </div>
+            <div className="flex flex-col px-5 gap-6 mb-6 smallsm:px-8 sm:items-center sm:gap-8 lg:mb-12">
+            <Button className="bg-green-300 flex gap-3 sm:w-[550px]" as={Link} href="/shop">
+              <Basket size={24} /> Découvrir la boutique
+            </Button>
+            <Button
+            className="bg-violet-600 text-white flex gap-3 sm:w-[550px]"
+              as={Link}
+              href="https://discord.gg/rvzyZVqdDs"
+              target="blank"
+            >
+              <DiscordLogo size={24} /> Rejoindre le Discord
+            </Button>
+            </div>
+            <span className="text-red-400 text-sm">-20% sur toute la boutique pour votre première commande</span>
+          </div>
         </div>
       </section>
     </>
