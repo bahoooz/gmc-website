@@ -22,7 +22,7 @@ import {
 import { Avatar } from "@nextui-org/avatar";
 
 export default function NavbarComponent() {
-  const [isCurrentUser, setIsCurrentUser] = useState(true);
+  const [isCurrentUser, setIsCurrentUser] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
@@ -95,7 +95,7 @@ export default function NavbarComponent() {
         </NavbarContent>
       ) : (
         <NavbarContent justify="end">
-          <Button as={Link} href="/connexion" color="secondary">
+          <Button as={Link} href="/connexion" className="bg-violet-600 text-white">
             Connexion
           </Button>
         </NavbarContent>

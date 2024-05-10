@@ -1,27 +1,51 @@
-import NextAuth from "next-auth/next";
-import CredentialsProvider from "next-auth/providers/credentials";
+// @ts-nocheck
 
-const authOptions: any = {
+import NextAuth from 'next-auth'
+import Providers from 'next-auth/providers'
+import { connectMongoDB } from '@/lib/mongodb'
+import User from "@/models/user"
+
+type CredentialsType = {
+  username: string
+  password: string
+}
+
+export default NextAuth({
   providers: [
-    CredentialsProvider({
-      name: "credentials",
-      credentials: {},
-
-      async authorize(credentials: any) {
-        const user = { id: "1" };
-        return user;
+    Providers.Credentials({
+      name: 'Credentials',
+      credentials: {
+        username: { label: "Username", type: "text", placeholder: "jsmith" },
+        password: {  label: "Password", type: "password" }
       },
-    }),
+      authorize: async (credentials: CredentialsType) => {
+        const { username, password } = credentials
+
+        // Ajoutez ici votre logique pour trouver l'utilisateur et vérifier les informations d'identification
+        const user: | null = await findUser(username, password) // Remplacez ceci par votre fonction pour trouver l'utilisateur
+
+        if (user) {
+          return Promise.resolve(user)
+        } else {
+          return Promise.resolve(null)
+        }
+      }
+    })
   ],
+  database: process.env.MONGODB_URI,
   session: {
-    strategy: "jwt"
+    jwt: true,
   },
-  secret: process.env.NEXTAUTH_SECRET,
-  pages: {
-    signIn: "/connexion"
-  }
-};
-
-const handler = NextAuth(authOptions)
-
-export {handler as GET, handler as POST}
+  callbacks: {
+    async jwt(token: any, user: any) {
+      if (user) {
+        token.id = user.id
+      }
+      return token
+    },
+    async session(session : any, token: {id: number}) {
+      session.user.id = token.id
+      return session
+    },
+  },
+})
