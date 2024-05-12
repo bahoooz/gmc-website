@@ -2,7 +2,7 @@
 
 import NextAuth from "next-auth";
 import { MongoDBAdapter } from "@auth/mongodb-adapter";
-import clientPromise from "./lib/db";
+import clientPromise from "./db";
 import GitHubProvider from "next-auth/providers/github";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -14,3 +14,4 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     }),
   ],
 });
+

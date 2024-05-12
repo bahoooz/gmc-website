@@ -1,10 +1,14 @@
 "use client";
 
 import CardOffer from "@/components/CardOffer";
-import { Card, CardBody } from "@nextui-org/card";
+import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/card";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import { ArrowDown, ArrowsLeftRight } from "@phosphor-icons/react";
 import Link from "next/link";
+import DataConfigGlua from "./DataServices/config_glua.json";
+import { Image } from "@nextui-org/image";
+import { Divider } from "@nextui-org/divider";
+import { Button } from "@nextui-org/button";
 
 export default function Shop() {
   return (
@@ -56,7 +60,7 @@ export default function Shop() {
           >
             <Tab key="config_glua" title="Config gLua" className="text-white">
               <div>
-                <div className="flex flex-wrap justify-center gap-10 px-10 md:gap-20">
+                <div className="flex flex-wrap justify-center gap-10 px-10 mb-16 md:gap-20">
                   <CardOffer
                     title="Offre Serveur"
                     info_title="Start"
@@ -105,6 +109,29 @@ export default function Shop() {
                     price="99,99"
                     displayBestOffer={false}
                   />
+                </div>
+                <h3 className="text-center">Services</h3>
+                <div>
+                  {DataConfigGlua.map((service: any, index: any) => (
+                    <Card key={index} shadow="sm">
+                      <CardHeader className="flex flex-col">
+                        <Image
+                          src="/gmod_img_card.png"
+                          alt={service.title}
+                          width={300}
+                          height={225}
+                        />
+                        <span>{service.title}</span>
+                      </CardHeader>
+                      <CardBody>
+                        <Divider />
+                        <p>{service.description} </p>
+                      </CardBody>
+                      <CardFooter>
+                        <Button>Acheter {service.price}</Button>
+                      </CardFooter>
+                    </Card>
+                  ))}
                 </div>
               </div>
             </Tab>
