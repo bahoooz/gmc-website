@@ -50,7 +50,7 @@ export default function Shop() {
           <ArrowsLeftRight
             size={24}
             color="white"
-            className="absolute left-1/2 -translate-x-1/2 top-14"
+            className="absolute left-1/2 -translate-x-1/2 top-14 md:hidden"
           />
           <Tabs
             aria-label="Options"
@@ -60,7 +60,7 @@ export default function Shop() {
           >
             <Tab key="config_glua" title="Config gLua" className="text-white">
               <div>
-                <div className="flex flex-wrap justify-center gap-10 px-10 mb-16 md:gap-20">
+                <div className="flex flex-wrap justify-center gap-10 px-10 md:gap-20">
                   <CardOffer
                     title="Offre Serveur"
                     info_title="Start"
@@ -110,26 +110,27 @@ export default function Shop() {
                     displayBestOffer={false}
                   />
                 </div>
-                <h3 className="text-center">Services</h3>
-                <div>
+                <h3 className="text-center my-16 md:my-32 lg:text-start lg:ml-28 xl:my-48 2xl:ml-56">Services</h3>
+                <div className="flex flex-wrap justify-center gap-24 px-12 md:px-16 lg:gap-32">
                   {DataConfigGlua.map((service: any, index: any) => (
-                    <Card key={index} shadow="sm">
-                      <CardHeader className="flex flex-col">
+                    <Card key={index} className="w-64 text-center shadow-xl shadow-black">
+                      <div className="flex flex-col">
                         <Image
                           src="/gmod_img_card.png"
                           alt={service.title}
-                          width={300}
+                          width="100%"
                           height={225}
+                          className="w-full h-[200px] object-cover"
                         />
-                        <span>{service.title}</span>
-                      </CardHeader>
-                      <CardBody>
-                        <Divider />
-                        <p>{service.description} </p>
-                      </CardBody>
-                      <CardFooter>
-                        <Button>Acheter {service.price}</Button>
-                      </CardFooter>
+                        <span className="my-5 text-red-400 px-5">{service.title}</span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <Divider className="mb-5 w-4/5" />
+                        <p className="px-5 mb-5 text-sm">{service.description}</p>
+                      </div>
+                      <div className="px-5">
+                        <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">Acheter <span>{service.price}€</span></Button>
+                      </div>
                     </Card>
                   ))}
                 </div>
@@ -137,24 +138,316 @@ export default function Shop() {
             </Tab>
 
             <Tab key="dev_web" title="Dev Web" className="text-white">
-              <div className="">
-                <Card className="w-28">Offre Serveur Start</Card>
+            <div>
+                <div className="flex flex-wrap justify-center gap-10 px-10 md:gap-20">
+                  <CardOffer
+                    title="Offre Serveur"
+                    info_title="Start"
+                    liste={
+                      <>
+                        <li>la création d'un serveur garry's mod</li>
+                        <li>la création de 8 jobs</li>
+                        <li>la configuration de 5 addons / scripts</li>
+                        <li>la configuration de contenu workshop</li>
+                      </>
+                    }
+                    price="29,99"
+                    displayBestOffer={false}
+                  />
+                  <CardOffer
+                    title="Offre Serveur"
+                    info_title="Medium"
+                    liste={
+                      <>
+                        <li>la création d'un serveur garry's mod</li>
+                        <li>la création de 20 jobs</li>
+                        <li>la configuration de 15 addons / scripts</li>
+                        <li>
+                          l’optimisation et la création de contenu workshop
+                        </li>
+                        <li>1 mois d’hébergement sans frais supplémentaire</li>
+                      </>
+                    }
+                    price="69,99"
+                    outlineColor="xl:outline xl:outline-violet-600 xl:outline-8"
+                    displayBestOffer={true}
+                  />
+                  <CardOffer
+                    title="Offre Serveur"
+                    info_title="Biggest"
+                    liste={
+                      <>
+                        <li>la création d'un serveur garry's mod</li>
+                        <li>la création de 25 jobs</li>
+                        <li>la configuration de 25 addons / scripts</li>
+                        <li>service d’optimisation complet</li>
+                        <li>1 mois d’hébergement sans frais supplémentaire</li>
+                        <li>mapping + optimisation de map</li>
+                      </>
+                    }
+                    price="99,99"
+                    displayBestOffer={false}
+                  />
+                </div>
+                <h3 className="text-center my-16 md:my-32 lg:text-start lg:ml-28 xl:my-48 2xl:ml-56">Services</h3>
+                <div className="flex flex-wrap justify-center gap-24 px-12 md:px-16 lg:gap-32">
+                  {DataConfigGlua.map((service: any, index: any) => (
+                    <Card key={index} className="w-64 text-center shadow-xl shadow-black">
+                      <div className="flex flex-col">
+                        <Image
+                          src="/gmod_img_card.png"
+                          alt={service.title}
+                          width="100%"
+                          height={225}
+                          className="w-full h-[200px] object-cover"
+                        />
+                        <span className="my-5 text-red-400 px-5">{service.title}</span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <Divider className="mb-5 w-4/5" />
+                        <p className="px-5 mb-5 text-sm">{service.description}</p>
+                      </div>
+                      <div className="px-5">
+                        <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">Acheter <span>{service.price}€</span></Button>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </Tab>
 
             <Tab key="graphisme" title="Graphisme" className="text-white">
-              <div className="border">
-                <Card className="w-28">Offre Serveur Start</Card>
+            <div>
+                <div className="flex flex-wrap justify-center gap-10 px-10 md:gap-20">
+                  <CardOffer
+                    title="Offre Serveur"
+                    info_title="Start"
+                    liste={
+                      <>
+                        <li>la création d'un serveur garry's mod</li>
+                        <li>la création de 8 jobs</li>
+                        <li>la configuration de 5 addons / scripts</li>
+                        <li>la configuration de contenu workshop</li>
+                      </>
+                    }
+                    price="29,99"
+                    displayBestOffer={false}
+                  />
+                  <CardOffer
+                    title="Offre Serveur"
+                    info_title="Medium"
+                    liste={
+                      <>
+                        <li>la création d'un serveur garry's mod</li>
+                        <li>la création de 20 jobs</li>
+                        <li>la configuration de 15 addons / scripts</li>
+                        <li>
+                          l’optimisation et la création de contenu workshop
+                        </li>
+                        <li>1 mois d’hébergement sans frais supplémentaire</li>
+                      </>
+                    }
+                    price="69,99"
+                    outlineColor="xl:outline xl:outline-violet-600 xl:outline-8"
+                    displayBestOffer={true}
+                  />
+                  <CardOffer
+                    title="Offre Serveur"
+                    info_title="Biggest"
+                    liste={
+                      <>
+                        <li>la création d'un serveur garry's mod</li>
+                        <li>la création de 25 jobs</li>
+                        <li>la configuration de 25 addons / scripts</li>
+                        <li>service d’optimisation complet</li>
+                        <li>1 mois d’hébergement sans frais supplémentaire</li>
+                        <li>mapping + optimisation de map</li>
+                      </>
+                    }
+                    price="99,99"
+                    displayBestOffer={false}
+                  />
+                </div>
+                <h3 className="text-center my-16 md:my-32 lg:text-start lg:ml-28 xl:my-48 2xl:ml-56">Services</h3>
+                <div className="flex flex-wrap justify-center gap-24 px-12 md:px-16 lg:gap-32">
+                  {DataConfigGlua.map((service: any, index: any) => (
+                    <Card key={index} className="w-64 text-center shadow-xl shadow-black">
+                      <div className="flex flex-col">
+                        <Image
+                          src="/gmod_img_card.png"
+                          alt={service.title}
+                          width="100%"
+                          height={225}
+                          className="w-full h-[200px] object-cover"
+                        />
+                        <span className="my-5 text-red-400 px-5">{service.title}</span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <Divider className="mb-5 w-4/5" />
+                        <p className="px-5 mb-5 text-sm">{service.description}</p>
+                      </div>
+                      <div className="px-5">
+                        <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">Acheter <span>{service.price}€</span></Button>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </Tab>
             <Tab key="mapping" title="Mapping">
-              <div className="border">
-                <Card className="w-28">Offre Serveur Start</Card>
+            <div>
+                <div className="flex flex-wrap justify-center gap-10 px-10 md:gap-20">
+                  <CardOffer
+                    title="Offre Serveur"
+                    info_title="Start"
+                    liste={
+                      <>
+                        <li>la création d'un serveur garry's mod</li>
+                        <li>la création de 8 jobs</li>
+                        <li>la configuration de 5 addons / scripts</li>
+                        <li>la configuration de contenu workshop</li>
+                      </>
+                    }
+                    price="29,99"
+                    displayBestOffer={false}
+                  />
+                  <CardOffer
+                    title="Offre Serveur"
+                    info_title="Medium"
+                    liste={
+                      <>
+                        <li>la création d'un serveur garry's mod</li>
+                        <li>la création de 20 jobs</li>
+                        <li>la configuration de 15 addons / scripts</li>
+                        <li>
+                          l’optimisation et la création de contenu workshop
+                        </li>
+                        <li>1 mois d’hébergement sans frais supplémentaire</li>
+                      </>
+                    }
+                    price="69,99"
+                    outlineColor="xl:outline xl:outline-violet-600 xl:outline-8"
+                    displayBestOffer={true}
+                  />
+                  <CardOffer
+                    title="Offre Serveur"
+                    info_title="Biggest"
+                    liste={
+                      <>
+                        <li>la création d'un serveur garry's mod</li>
+                        <li>la création de 25 jobs</li>
+                        <li>la configuration de 25 addons / scripts</li>
+                        <li>service d’optimisation complet</li>
+                        <li>1 mois d’hébergement sans frais supplémentaire</li>
+                        <li>mapping + optimisation de map</li>
+                      </>
+                    }
+                    price="99,99"
+                    displayBestOffer={false}
+                  />
+                </div>
+                <h3 className="text-center my-16 md:my-32 lg:text-start lg:ml-28 xl:my-48 2xl:ml-56">Services</h3>
+                <div className="flex flex-wrap justify-center gap-24 px-12 md:px-16 lg:gap-32">
+                  {DataConfigGlua.map((service: any, index: any) => (
+                    <Card key={index} className="w-64 text-center shadow-xl shadow-black">
+                      <div className="flex flex-col">
+                        <Image
+                          src="/gmod_img_card.png"
+                          alt={service.title}
+                          width="100%"
+                          height={225}
+                          className="w-full h-[200px] object-cover"
+                        />
+                        <span className="my-5 text-red-400 px-5">{service.title}</span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <Divider className="mb-5 w-4/5" />
+                        <p className="px-5 mb-5 text-sm">{service.description}</p>
+                      </div>
+                      <div className="px-5">
+                        <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">Acheter <span>{service.price}€</span></Button>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </Tab>
             <Tab key="config_discord" title="Config Discord">
-              <div className="border">
-                <Card className="w-28">Offre Serveur Start</Card>
+            <div>
+                <div className="flex flex-wrap justify-center gap-10 px-10 md:gap-20">
+                  <CardOffer
+                    title="Offre Serveur"
+                    info_title="Start"
+                    liste={
+                      <>
+                        <li>la création d'un serveur garry's mod</li>
+                        <li>la création de 8 jobs</li>
+                        <li>la configuration de 5 addons / scripts</li>
+                        <li>la configuration de contenu workshop</li>
+                      </>
+                    }
+                    price="29,99"
+                    displayBestOffer={false}
+                  />
+                  <CardOffer
+                    title="Offre Serveur"
+                    info_title="Medium"
+                    liste={
+                      <>
+                        <li>la création d'un serveur garry's mod</li>
+                        <li>la création de 20 jobs</li>
+                        <li>la configuration de 15 addons / scripts</li>
+                        <li>
+                          l’optimisation et la création de contenu workshop
+                        </li>
+                        <li>1 mois d’hébergement sans frais supplémentaire</li>
+                      </>
+                    }
+                    price="69,99"
+                    outlineColor="xl:outline xl:outline-violet-600 xl:outline-8"
+                    displayBestOffer={true}
+                  />
+                  <CardOffer
+                    title="Offre Serveur"
+                    info_title="Biggest"
+                    liste={
+                      <>
+                        <li>la création d'un serveur garry's mod</li>
+                        <li>la création de 25 jobs</li>
+                        <li>la configuration de 25 addons / scripts</li>
+                        <li>service d’optimisation complet</li>
+                        <li>1 mois d’hébergement sans frais supplémentaire</li>
+                        <li>mapping + optimisation de map</li>
+                      </>
+                    }
+                    price="99,99"
+                    displayBestOffer={false}
+                  />
+                </div>
+                <h3 className="text-center my-16 md:my-32 lg:text-start lg:ml-28 xl:my-48 2xl:ml-56">Services</h3>
+                <div className="flex flex-wrap justify-center gap-24 px-12 md:px-16 lg:gap-32">
+                  {DataConfigGlua.map((service: any, index: any) => (
+                    <Card key={index} className="w-64 text-center shadow-xl shadow-black">
+                      <div className="flex flex-col">
+                        <Image
+                          src="/gmod_img_card.png"
+                          alt={service.title}
+                          width="100%"
+                          height={225}
+                          className="w-full h-[200px] object-cover"
+                        />
+                        <span className="my-5 text-red-400 px-5">{service.title}</span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <Divider className="mb-5 w-4/5" />
+                        <p className="px-5 mb-5 text-sm">{service.description}</p>
+                      </div>
+                      <div className="px-5">
+                        <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">Acheter <span>{service.price}€</span></Button>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </Tab>
           </Tabs>

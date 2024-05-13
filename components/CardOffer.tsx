@@ -26,8 +26,8 @@ export default function CardOffer({
       >
         <span className="text-center">Meilleur Rapport Qualité / Prix</span>
       </Card>
-      <Card
-        className={`relative w-80 flex flex-col items-center text-center px-4 2xl:w-[380px] 2xl:px-8 ${outlineColor}`}
+      <Card 
+        className={`relative w-80 flex flex-col items-center text-center px-4 2xl:w-[380px] 2xl:px-8 shadow-xl shadow-black ${outlineColor}`}
       >
         <div className="text-center mt-8 mb-4">
           <h2 className="text-2xl uppercase font-bold text-red-400">{title}</h2>
