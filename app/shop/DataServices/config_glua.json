@@ -1,52 +1,62 @@
 [
   {
     "title": "Optimisation Workshop",
-    "description": " egestas sed accumsan mauris nunc porttitor pretium commodo. Ac elementum euismod vitae ut.",
-    "price": "4,99"
+    "description": "Une envie de fraîcheur ? Réduisez le taux d'addons de votre workshop !",
+    "price": "4,99",
+    "payment_type": "Paiement Unique"
   },
   {
     "title": "Création Content Workshop",
-    "description": " egestas sed accumsan mauris nunc porttitor pretium commodo. Ac elementum euismod vitae ut.",
-    "price": "4,99"
+    "description": "Vous souhaitez publier un addon ? On s'en occupe !",
+    "price": "4,99",
+    "payment_type": "Paiement Unique"
   },
   {
     "title": "Service d'Optimisation Complet",
-    "description": " egestas sed accumsan mauris nunc porttitor pretium commodo. Ac elementum euismod vitae ut.",
-    "price": "24,99"
+    "description": "Un ping élevé ? Des problèmes de réseaux ? Des fps en chute libre ? On s'occupe tout ça !",
+    "price": "24,99",
+    "payment_type": "Paiement Unique"
   },
   {
     "title": "Création 10 Jobs",
-    "description": " egestas sed accumsan mauris nunc porttitor pretium commodo. Ac elementum euismod vitae ut.",
-    "price": "4,99"
+    "description": "Besoin de 10 métiers ? Hm, petit joueur...",
+    "price": "4,99",
+    "payment_type": "Paiement Unique"
   },
   {
     "title": "Création 20 Jobs",
-    "description": " egestas sed accumsan mauris nunc porttitor pretium commodo. Ac elementum euismod vitae ut.",
-    "price": "9,99"
+    "description": "Besoin de 20 métiers ? Ça devient intéressent.",
+    "price": "9,99",
+    "payment_type": "Paiement Unique"
   },
   {
     "title": "Création 40 Jobs",
-    "description": " egestas sed accumsan mauris nunc porttitor pretium commodo. Ac elementum euismod vitae ut.",
-    "price": "19,99"
+    "description": "Besoin de 40 métiers ? Vous êtes un expert !",
+    "price": "19,99",
+    "payment_type": "Paiement Unique"
   },
   {
     "title": "Configuration 5 Addons/Scripts",
-    "description": " egestas sed accumsan mauris nunc porttitor pretium commodo. Ac elementum euismod vitae ut.",
-    "price": "4,99"
+    "description": "Vous avez 5 addons à configurer ? Hm, petit joueur...",
+    "price": "4,99",
+    "payment_type": "Paiement Unique"
   },
   {
     "title": "Configuration 10 Addons/Scripts",
-    "description": " egestas sed accumsan mauris nunc porttitor pretium commodo. Ac elementum euismod vitae ut.",
-    "price": "11,99"
+    "description": "Vous avez 10 addons à configurer ? Pourquoi pas..",
+    "price": "11,99",
+    "payment_type": "Paiement Unique"
   },
   {
     "title": "Configuration 20 Addons/Scripts",
-    "description": " egestas sed accumsan mauris nunc porttitor pretium commodo. Ac elementum euismod vitae ut.",
-    "price": "24,99"
+    "description": "Vous avez 20 addons à configurer ? Ça devient intéressent.",
+    "price": "24,99",
+    "payment_type": "Paiement Unique"
   },
   {
     "title": "Configuration 30 Addons/Scripts",
-    "description": " egestas sed accumsan mauris nunc porttitor pretium commodo. Ac elementum euismod vitae ut.",
-    "price": "59,99"
+    "description": "Vous avez 30 addons à configurer ? Vous êtes un expert !",
+    "price": "59,99",
+    "payment_type": "Paiement Unique"
   }
 ]

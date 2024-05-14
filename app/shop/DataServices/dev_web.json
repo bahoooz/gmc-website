@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Mini Single Page",
+    "description": "Une simple page avec 3 sections maximum selon ce que vous voulez ! (maquette non comprise donc vous devrez la fournir)",
+    "price": "14,99",
+    "payment_type": "Paiement Unique"
+  },
+  {
+    "title": "Great Single Page",
+    "description": "Une simple page avec 6 sections maximum selon ce que vous voulez ! (maquette non comprise donc vous devrez la fournir)",
+    "price": "24,99",
+    "payment_type": "Paiement Unique"
+  },
+  {
+    "title": "Ultra Single Page",
+    "description": "Une page complète avec jusqu'à 10 sections selon ce que vous voulez ! (maquette non comprise donc vous devrez la fournir)",
+    "price": "39,99",
+    "payment_type": "Paiement Unique"
+  },
+  {
+    "title": "Création d'un composant",
+    "description": "Vous avez déjà un site web existant et vous voulez ajouter un élément fait par nos soins, ou vous voulez simplement un composant pour votre site web ? On s'en occupe !",
+    "price": "9,99",
+    "payment_type": "Paiement Unique"
+  },
+  {
+    "title": "Optimisation Site Web",
+    "description": "Nous vous optimisons votre site web pour le rendre plus performant, plus accessible, et mieux référencé !",
+    "price": "14,99",
+    "payment_type": "Paiement Unique"
+  },
+  {
+    "title": "Maintenance Site Web",
+    "description": "Nous maintenons votre site web, pour régler les potentiels bugs, améliorer l'optimisation, et ajoutez de petites mises à jours au fil du temps ! (par mois)",
+    "price": "14,99",
+    "payment_type": "Paiement Mensuel"
+  }
+]

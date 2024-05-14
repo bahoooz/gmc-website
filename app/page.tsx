@@ -20,13 +20,12 @@ import {
   UsersThree,
 } from "@phosphor-icons/react";
 import Link from "next/link";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <header>
-        <div className="relative h-screen bg-black bg-opacity-50">
+        <div className="relative min-h-screen h-[800px] bg-black bg-opacity-50">
           <h1 className="text-3xl smallsm:text-5xl font-bold text-center pt-16 sm:pt-40 text-white px-5">
             Garry’s Mod Creators
           </h1>

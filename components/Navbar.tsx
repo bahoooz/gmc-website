@@ -20,18 +20,13 @@ import {
   DropdownItem,
 } from "@nextui-org/dropdown";
 import { Avatar } from "@nextui-org/avatar";
+import { signOut, useSession } from "next-auth/react";
 
 export default function NavbarComponent() {
+  const { data: session } = useSession();
   const [isCurrentUser, setIsCurrentUser] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = [
-    "Accueil",
-    "Boutique",
-    "Nous contacter",
-    "La communauté sur Discord",
-  ];
-  const linkItems = ["#", "/shop", "/contact", "/discord-community"];
   return (
     <Navbar
       className="bg-black h-16"
@@ -67,7 +62,7 @@ export default function NavbarComponent() {
           <Link href="/discord-community">La communauté sur Discord</Link>
         </NavbarItem>
       </NavbarContent>
-      {isCurrentUser ? (
+      {session ? (
         <NavbarContent justify="end">
           <Dropdown placement="bottom-end">
             <DropdownTrigger>
@@ -76,18 +71,18 @@ export default function NavbarComponent() {
                 color="secondary"
                 as="button"
                 className="transition-transform"
-                name="Bahoz"
+                name={session.user?.name as string}
               />
             </DropdownTrigger>
             <DropdownMenu aria-label="Profile Actions" variant="flat">
               <DropdownItem key="profile" className="h-14 gap-2">
                 <p className="font-semibold">Connecté sur</p>
-                <p className="font-semibold">bahoz.config@gmail.com</p>
+                <p className="font-semibold">{session.user?.email}</p>
               </DropdownItem>
               <DropdownItem key="account" href="/user/user3">
                 Mon compte
               </DropdownItem>
-              <DropdownItem key="logout" color="danger">
+              <DropdownItem key="logout" color="danger" onClick={() => signOut()}>
                 Déconnexion
               </DropdownItem>
             </DropdownMenu>

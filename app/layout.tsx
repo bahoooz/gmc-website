@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import NavbarComponent from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SessionWrapper from "@/components/SessionWrapper";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -23,13 +24,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" suppressHydrationWarning>
-      <head />
-      <body className={raleway.className}>
+    <SessionWrapper>
+      <html lang="fr" suppressHydrationWarning>
+        <head />
+        <body className={raleway.className}>
           <NavbarComponent />
           {children}
           <Footer />
-      </body>
-    </html>
+        </body>
+      </html>
+    </SessionWrapper>
   );
 }
