@@ -20,6 +20,7 @@ import {
   UsersThree,
 } from "@phosphor-icons/react";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
