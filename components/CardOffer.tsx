@@ -13,6 +13,7 @@ export default function CardOffer({
   price,
   outlineColor,
   displayBestOffer,
+  payment_link,
 }: any) {
   return (
     <div className="relative">
@@ -26,7 +27,7 @@ export default function CardOffer({
       >
         <span className="text-center">Meilleur Rapport Qualité / Prix</span>
       </Card>
-      <Card 
+      <Card
         className={`relative w-80 flex flex-col items-center text-center px-4 2xl:w-[380px] 2xl:px-8 shadow-xl shadow-black ${outlineColor}`}
       >
         <div className="text-center mt-8 mb-4">
@@ -62,7 +63,7 @@ export default function CardOffer({
         </div>
         <Button
           as={Link}
-          href=""
+          href={payment_link}
           className="bg-violet-600 text-white text-base mb-8 w-full h-12 flex justify-between"
         >
           Acheter <span>{price}€</span>

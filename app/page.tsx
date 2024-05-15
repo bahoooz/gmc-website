@@ -81,7 +81,7 @@ export default function Home() {
             </Button>
           </div>
           <Link href="https://discord.gg/rvzyZVqdDs" target="_blank">
-            <div className="hidden text-white lg:flex gap-3 items-center bg-black h-12 w-72 absolute left-0 pl-12 rounded-tr-full rounded-br-full">
+            <div className="hidden text-white lg:flex gap-3 items-center bg-black h-12 w-72 absolute left-0 pl-12 rounded-tr-full rounded-br-full hover:scale-105 transition-all">
               <span>Rejoignez nous sur</span>
               <Image
                 className="w-auto h-6"

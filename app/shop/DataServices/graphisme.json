@@ -1,8 +1,32 @@
 [
-    {
-        "title": "Logo",
-        "description": "Un logo qualitatif fait avec Illustrator !",
-        "price": "9,99",
-        "payment_type": "Paiement Unique"
-      }
+  {
+    "title": "Logo",
+    "description": "Un logo qualitatif fait avec Illustrator !",
+    "price": "9,99",
+    "payment_type": "Paiement Unique"
+  },
+  {
+    "title": "Bannière",
+    "description": "Une bannière qualitative faite par nos soins",
+    "price": "7,99",
+    "payment_type": "Paiement Unique"
+  },
+  {
+    "title": "Icône",
+    "description": "Une icône selon vos besoins !",
+    "price": "9,99",
+    "payment_type": "Paiement Unique"
+  },
+  {
+    "title": "Affiche",
+    "description": "Une affiche realisée avec amour !",
+    "price": "9,99",
+    "payment_type": "Paiement Unique"
+  },
+  {
+    "title": "Wallpaper",
+    "description": "Un wallpaper dans le style que vous voulez, pour vous !",
+    "price": "9,99",
+    "payment_type": "Paiement Unique"
+  }
 ]

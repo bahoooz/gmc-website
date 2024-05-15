@@ -24,12 +24,11 @@ import { signOut, useSession } from "next-auth/react";
 
 export default function NavbarComponent() {
   const { data: session } = useSession();
-  const [isCurrentUser, setIsCurrentUser] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <Navbar
-      className="bg-black h-16"
+      className="bg-black h-16 shadow-xl"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
@@ -48,17 +47,17 @@ export default function NavbarComponent() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         />
       </NavbarContent>
-      <NavbarContent className="text-white gap-12 hidden md:flex">
-        <NavbarItem>
+      <NavbarContent className="text-white gap-12 hidden md:flex ">
+        <NavbarItem className="hover:text-violet-400">
           <Link href="/">Accueil</Link>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className="hover:text-violet-400">
           <Link href="/shop">Boutique</Link>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className="hover:text-violet-400">
           <Link href="/contact">Nous contacter</Link>
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className="hover:text-violet-400">
           <Link href="/discord-community">La communauté sur Discord</Link>
         </NavbarItem>
       </NavbarContent>
@@ -79,10 +78,14 @@ export default function NavbarComponent() {
                 <p className="font-semibold">Connecté sur</p>
                 <p className="font-semibold">{session.user?.email}</p>
               </DropdownItem>
-              <DropdownItem key="account" href="/user/user3">
+              <DropdownItem key="account" href="/user">
                 Mon compte
               </DropdownItem>
-              <DropdownItem key="logout" color="danger" onClick={() => signOut()}>
+              <DropdownItem
+                key="logout"
+                color="danger"
+                onClick={() => signOut()}
+              >
                 Déconnexion
               </DropdownItem>
             </DropdownMenu>
@@ -90,29 +93,49 @@ export default function NavbarComponent() {
         </NavbarContent>
       ) : (
         <NavbarContent justify="end">
-          <Button as={Link} href="/connexion" className="bg-violet-600 text-white">
+          <Button
+            as={Link}
+            href="/connexion"
+            className="bg-violet-600 text-white"
+          >
             Connexion
           </Button>
         </NavbarContent>
       )}
-      <NavbarMenu className="bg-black text-white">
+      <NavbarMenu className="bg-black bg-opacity-50 text-white pt-8 gap-4">
         <NavbarMenuItem>
-          <Link className="w-full" href="/" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            className="w-full text-xl"
+            href="/"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Accueil
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link className="w-full" href="/shop" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            className="w-full text-xl"
+            href="/shop"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Boutique
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link className="w-full" href="/contact" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            className="w-full text-xl"
+            href="/contact"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Nous contacter
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link className="w-full" href="/discord-community" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            className="w-full text-xl"
+            href="/discord-community"
+            onClick={() => setIsMenuOpen(false)}
+          >
             La communauté sur Discord
           </Link>
         </NavbarMenuItem>

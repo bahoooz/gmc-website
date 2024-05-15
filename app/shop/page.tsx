@@ -8,8 +8,8 @@ import Link from "next/link";
 import DataConfigGlua from "./DataServices/config_glua.json";
 import DataDevWeb from "./DataServices/dev_web.json";
 import DataGraphisme from "./DataServices/graphisme.json";
-import DataMapping from "./DataServices/mapping.json"
-import DataConfigDiscord from "./DataServices/config_discord.json"
+import DataMapping from "./DataServices/mapping.json";
+import DataConfigDiscord from "./DataServices/config_discord.json";
 import { Image } from "@nextui-org/image";
 import { Divider } from "@nextui-org/divider";
 import { Button } from "@nextui-org/button";
@@ -78,6 +78,7 @@ export default function Shop() {
                     }
                     price="29,99"
                     displayBestOffer={false}
+                    payment_link="https://buy.stripe.com/test_28oeWI6F4aXRaf67st"
                   />
                   <CardOffer
                     title="Offre Serveur"
@@ -96,6 +97,7 @@ export default function Shop() {
                     price="69,99"
                     outlineColor="xl:outline xl:outline-violet-600 xl:outline-8"
                     displayBestOffer={true}
+                    payment_link=""
                   />
                   <CardOffer
                     title="Offre Serveur"
@@ -112,6 +114,7 @@ export default function Shop() {
                     }
                     price="99,99"
                     displayBestOffer={false}
+                    payment_link=""
                   />
                 </div>
                 <h3 className="text-center my-16 md:my-32 lg:text-start lg:ml-28 xl:my-48 2xl:ml-56">
@@ -180,6 +183,7 @@ export default function Shop() {
                     }
                     price="49,99"
                     displayBestOffer={false}
+                    payment_link=""
                   />
                   <CardOffer
                     title="Offre Website"
@@ -210,6 +214,7 @@ export default function Shop() {
                     price="74,99"
                     outlineColor="xl:outline xl:outline-violet-600 xl:outline-8"
                     displayBestOffer={true}
+                    payment_link=""
                   />
                   <CardOffer
                     title="Offre Website"
@@ -240,6 +245,7 @@ export default function Shop() {
                     }
                     price="149,99"
                     displayBestOffer={false}
+                    payment_link=""
                   />
                 </div>
                 <h3 className="text-center my-16 md:my-32 lg:text-start lg:ml-28 xl:my-48 2xl:ml-56">
@@ -303,6 +309,7 @@ export default function Shop() {
                     }
                     price="34,99"
                     displayBestOffer={false}
+                    payment_link=""
                   />
                   <CardOffer
                     title="Offre Identité Graphique"
@@ -320,6 +327,7 @@ export default function Shop() {
                     price="59,99"
                     outlineColor="xl:outline xl:outline-violet-600 xl:outline-8"
                     displayBestOffer={true}
+                    payment_link=""
                   />
                   <CardOffer
                     title="Offre Identitée Graphique Complète"
@@ -337,6 +345,7 @@ export default function Shop() {
                     }
                     price="99,99"
                     displayBestOffer={false}
+                    payment_link=""
                   />
                 </div>
                 <h3 className="text-center my-16 md:my-32 lg:text-start lg:ml-28 xl:my-48 2xl:ml-56">
@@ -345,36 +354,36 @@ export default function Shop() {
                 <div className="flex flex-wrap justify-center gap-24 px-12 md:px-16 lg:gap-32">
                   {DataGraphisme.map((service: any, index: any) => (
                     <Card
-                    key={index}
-                    className="w-64 text-center shadow-xl shadow-black flex flex-col justify-between"
-                  >
-                    <div className="flex flex-col">
-                      <Image
-                        src="/graphisme_img_card.png"
-                        alt={service.title}
-                        width="100%"
-                        height={225}
-                        className="w-full h-[200px] object-cover"
-                      />
-                      <span className="my-5 text-red-400 px-5">
-                        {service.title}
-                      </span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                      <Divider className="mb-5 w-4/5" />
-                      <p className="px-5 mb-5 text-sm">
-                        {service.description}
-                      </p>
-                    </div>
-                    <div className="px-5 flex flex-col gap-5">
-                      <span className="text-violet-400 text-sm uppercase">
-                        {service.payment_type}
-                      </span>
-                      <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">
-                        Acheter <span>{service.price}€</span>
-                      </Button>
-                    </div>
-                  </Card>
+                      key={index}
+                      className="w-64 text-center shadow-xl shadow-black flex flex-col justify-between"
+                    >
+                      <div className="flex flex-col">
+                        <Image
+                          src="/graphisme_img_card.png"
+                          alt={service.title}
+                          width="100%"
+                          height={225}
+                          className="w-full h-[200px] object-cover"
+                        />
+                        <span className="my-5 text-red-400 px-5">
+                          {service.title}
+                        </span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <Divider className="mb-5 w-4/5" />
+                        <p className="px-5 mb-5 text-sm">
+                          {service.description}
+                        </p>
+                      </div>
+                      <div className="px-5 flex flex-col gap-5">
+                        <span className="text-violet-400 text-sm uppercase">
+                          {service.payment_type}
+                        </span>
+                        <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">
+                          Acheter <span>{service.price}€</span>
+                        </Button>
+                      </div>
+                    </Card>
                   ))}
                 </div>
               </div>
@@ -383,7 +392,7 @@ export default function Shop() {
               <div>
                 <div className="flex flex-wrap justify-center gap-10 px-10 md:gap-20">
                   <CardOffer
-                    title="Offre Serveur"
+                    title="Offre Mapping"
                     info_title="Start"
                     liste={
                       <>
@@ -395,9 +404,10 @@ export default function Shop() {
                     }
                     price="29,99"
                     displayBestOffer={false}
+                    payment_link=""
                   />
                   <CardOffer
-                    title="Offre Serveur"
+                    title="Offre Mapping"
                     info_title="Medium"
                     liste={
                       <>
@@ -413,9 +423,10 @@ export default function Shop() {
                     price="69,99"
                     outlineColor="xl:outline xl:outline-violet-600 xl:outline-8"
                     displayBestOffer={true}
+                    payment_link=""
                   />
                   <CardOffer
-                    title="Offre Serveur"
+                    title="Offre Mapping"
                     info_title="Biggest"
                     liste={
                       <>
@@ -429,44 +440,45 @@ export default function Shop() {
                     }
                     price="99,99"
                     displayBestOffer={false}
+                    payment_link=""
                   />
                 </div>
-                <h3 className="text-center my-16 md:my-32 lg:text-start lg:ml-28 xl:my-48 2xl:ml-56">
+                <h3 className="text-center my-16 md:my-32 lg:text-start lg:ml-28 xl:my-48 2xl:ml-56 text-white">
                   Services
                 </h3>
                 <div className="flex flex-wrap justify-center gap-24 px-12 md:px-16 lg:gap-32">
                   {DataMapping.map((service: any, index: any) => (
                     <Card
-                    key={index}
-                    className="w-64 text-center shadow-xl shadow-black flex flex-col justify-between"
-                  >
-                    <div className="flex flex-col">
-                      <Image
-                        src="/graphisme_img_card.png"
-                        alt={service.title}
-                        width="100%"
-                        height={225}
-                        className="w-full h-[200px] object-cover"
-                      />
-                      <span className="my-5 text-red-400 px-5">
-                        {service.title}
-                      </span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                      <Divider className="mb-5 w-4/5" />
-                      <p className="px-5 mb-5 text-sm">
-                        {service.description}
-                      </p>
-                    </div>
-                    <div className="px-5 flex flex-col gap-5">
-                      <span className="text-violet-400 text-sm uppercase">
-                        {service.payment_type}
-                      </span>
-                      <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">
-                        Acheter <span>{service.price}€</span>
-                      </Button>
-                    </div>
-                  </Card>
+                      key={index}
+                      className="w-64 text-center shadow-xl shadow-black flex flex-col justify-between"
+                    >
+                      <div className="flex flex-col">
+                        <Image
+                          src="/mapping_img_card.png"
+                          alt={service.title}
+                          width="100%"
+                          height={225}
+                          className="w-full h-[200px] object-cover"
+                        />
+                        <span className="my-5 text-red-400 px-5">
+                          {service.title}
+                        </span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <Divider className="mb-5 w-4/5" />
+                        <p className="px-5 mb-5 text-sm">
+                          {service.description}
+                        </p>
+                      </div>
+                      <div className="px-5 flex flex-col gap-5">
+                        <span className="text-violet-400 text-sm uppercase">
+                          {service.payment_type}
+                        </span>
+                        <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">
+                          Acheter <span>{service.price}€</span>
+                        </Button>
+                      </div>
+                    </Card>
                   ))}
                 </div>
               </div>
@@ -475,90 +487,90 @@ export default function Shop() {
               <div>
                 <div className="flex flex-wrap justify-center gap-10 px-10 md:gap-20">
                   <CardOffer
-                    title="Offre Serveur"
+                    title="Offre Discord"
                     info_title="Start"
                     liste={
                       <>
-                        <li>la création d'un serveur garry's mod</li>
-                        <li>la création de 8 jobs</li>
-                        <li>la configuration de 5 addons / scripts</li>
-                        <li>la configuration de contenu workshop</li>
+                        <li>la création d'un serveur discord</li>
+                        <li>la création de jusqu'à 15 rôles</li>
+                        <li>la création de jusqu'à 20 salons</li>
+                        <li>la configuration de jusqu'à 2 bots</li>
+                      </>
+                    }
+                    price="9,99"
+                    displayBestOffer={false}
+                    payment_link=""
+                  />
+                  <CardOffer
+                    title="Offre Discord"
+                    info_title="Medium"
+                    liste={
+                      <>
+                        <li>la création d'un serveur discord</li>
+                        <li>la création de jusqu'à 20 rôles</li>
+                        <li>la création de jusqu'à 30 salons</li>
+                        <li>la configuration de jusqu'à 5 bots</li>
+                        <li>la création d'un bot personnalisé</li>
+                      </>
+                    }
+                    price="19,99"
+                    outlineColor="xl:outline xl:outline-violet-600 xl:outline-8"
+                    displayBestOffer={true}
+                    payment_link=""
+                  />
+                  <CardOffer
+                    title="Offre Discord"
+                    info_title="Biggest"
+                    liste={
+                      <>
+                        <li>la création d'un serveur discord</li>
+                        <li>la création de jusqu'à 30 rôles</li>
+                        <li>la création de jusqu'à 50 salons</li>
+                        <li>la configuration de jusqu'à 8 bots</li>
+                        <li>la création d'un bot personnalisé</li>
                       </>
                     }
                     price="29,99"
                     displayBestOffer={false}
-                  />
-                  <CardOffer
-                    title="Offre Serveur"
-                    info_title="Medium"
-                    liste={
-                      <>
-                        <li>la création d'un serveur garry's mod</li>
-                        <li>la création de 20 jobs</li>
-                        <li>la configuration de 15 addons / scripts</li>
-                        <li>
-                          l’optimisation et la création de contenu workshop
-                        </li>
-                        <li>1 mois d’hébergement sans frais supplémentaire</li>
-                      </>
-                    }
-                    price="69,99"
-                    outlineColor="xl:outline xl:outline-violet-600 xl:outline-8"
-                    displayBestOffer={true}
-                  />
-                  <CardOffer
-                    title="Offre Serveur"
-                    info_title="Biggest"
-                    liste={
-                      <>
-                        <li>la création d'un serveur garry's mod</li>
-                        <li>la création de 25 jobs</li>
-                        <li>la configuration de 25 addons / scripts</li>
-                        <li>service d’optimisation complet</li>
-                        <li>1 mois d’hébergement sans frais supplémentaire</li>
-                        <li>mapping + optimisation de map</li>
-                      </>
-                    }
-                    price="99,99"
-                    displayBestOffer={false}
+                    payment_link=""
                   />
                 </div>
-                <h3 className="text-center my-16 md:my-32 lg:text-start lg:ml-28 xl:my-48 2xl:ml-56">
+                <h3 className="text-center my-16 md:my-32 lg:text-start lg:ml-28 xl:my-48 2xl:ml-56 text-white">
                   Services
                 </h3>
                 <div className="flex flex-wrap justify-center gap-24 px-12 md:px-16 lg:gap-32">
                   {DataConfigDiscord.map((service: any, index: any) => (
                     <Card
-                    key={index}
-                    className="w-64 text-center shadow-xl shadow-black flex flex-col justify-between"
-                  >
-                    <div className="flex flex-col">
-                      <Image
-                        src="/graphisme_img_card.png"
-                        alt={service.title}
-                        width="100%"
-                        height={225}
-                        className="w-full h-[200px] object-cover"
-                      />
-                      <span className="my-5 text-red-400 px-5">
-                        {service.title}
-                      </span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                      <Divider className="mb-5 w-4/5" />
-                      <p className="px-5 mb-5 text-sm">
-                        {service.description}
-                      </p>
-                    </div>
-                    <div className="px-5 flex flex-col gap-5">
-                      <span className="text-violet-400 text-sm uppercase">
-                        {service.payment_type}
-                      </span>
-                      <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">
-                        Acheter <span>{service.price}€</span>
-                      </Button>
-                    </div>
-                  </Card>
+                      key={index}
+                      className="w-64 text-center shadow-xl shadow-black flex flex-col justify-between"
+                    >
+                      <div className="flex flex-col">
+                        <Image
+                          src="/discord_img_card.png"
+                          alt={service.title}
+                          width="100%"
+                          height={225}
+                          className="w-full h-[200px] object-cover"
+                        />
+                        <span className="my-5 text-red-400 px-5">
+                          {service.title}
+                        </span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <Divider className="mb-5 w-4/5" />
+                        <p className="px-5 mb-5 text-sm">
+                          {service.description}
+                        </p>
+                      </div>
+                      <div className="px-5 flex flex-col gap-5">
+                        <span className="text-violet-400 text-sm uppercase">
+                          {service.payment_type}
+                        </span>
+                        <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">
+                          Acheter <span>{service.price}€</span>
+                        </Button>
+                      </div>
+                    </Card>
                   ))}
                 </div>
               </div>
