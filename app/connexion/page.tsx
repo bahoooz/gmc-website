@@ -1,6 +1,5 @@
 "use client";
 
-import { DiscordLogo, GithubLogo, GoogleLogo } from "@phosphor-icons/react";
 import { Button } from "@nextui-org/button";
 import { signIn } from "next-auth/react";
 import { Image } from "@nextui-org/image";
