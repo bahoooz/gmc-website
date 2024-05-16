@@ -9,8 +9,6 @@ import {
   Code,
   BracketsCurly,
   Palette,
-  VectorThree,
-  UsersFour,
   Basket,
   CaretDown,
   DiscordLogo,
@@ -18,6 +16,7 @@ import {
   Warning,
   ArrowDown,
   UsersThree,
+  Gavel,
 } from "@phosphor-icons/react";
 import Link from "next/link";
 
@@ -54,13 +53,13 @@ export default function Home() {
             </div>
             <div className="text-red-400 flex flex-col items-center gap-4">
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-400 bg-opacity-50 rounded-xl flex justify-center items-center">
-                <VectorThree className="text-2xl sm:text-3xl" />
+                <Gavel className="text-2xl sm:text-3xl" />
               </div>
               <span className="text-sm sm:text-base">Mapping</span>
             </div>
             <div className="text-green-400 flex flex-col items-center gap-4">
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-green-400 bg-opacity-50 rounded-xl flex justify-center items-center">
-                <UsersFour className="text-2xl sm:text-3xl" />
+                <DiscordLogo className="text-2xl sm:text-3xl" />
               </div>
               <span className="text-sm sm:text-base">Config Discord</span>
             </div>
@@ -81,7 +80,7 @@ export default function Home() {
             </Button>
           </div>
           <Link href="https://discord.gg/rvzyZVqdDs" target="_blank">
-            <div className="hidden text-white lg:flex gap-3 items-center bg-black h-12 w-72 absolute left-0 pl-12 rounded-tr-full rounded-br-full hover:scale-105 transition-all">
+            <div className="hidden text-black font-bold lg:flex gap-3 items-center bg-gray-100 bg-opacity-70 h-12 w-72 absolute left-0 pl-12 rounded-tr-full rounded-br-full hover:scale-105 transition-all">
               <span>Rejoignez nous sur</span>
               <Image
                 className="w-auto h-6"
@@ -115,7 +114,7 @@ export default function Home() {
             <div className="text-center justify-center lg:justify-start flex flex-col smallsm:flex-row smallsm:items-end gap-6 mb-14">
               <span className="text-violet-600 text-6xl">1.</span>
               <h2 className="text-3xl smallsm:text-4xl xl:text-5xl">
-                Qui sommes-nous
+                Qui sommes-nous ?
               </h2>
             </div>
             <div className="text-justify">
@@ -130,7 +129,7 @@ export default function Home() {
                 cela nous gérons une équipe compétente qui propose les services
                 suivants :{" "}
                 <span className="text-violet-400">développement web</span>,{" "}
-                <span className="text-violet-400">configuration glua</span>,
+                <span className="text-violet-400">configuration glua</span>,{" "}
                 <span className="text-violet-400">graphisme</span>,{" "}
                 <span className="text-violet-400">mapping</span>, et{" "}
                 <span className="text-violet-400">
@@ -464,7 +463,7 @@ export default function Home() {
               <DiscordLogo size={24} /> Rejoindre le Discord
             </Button>
             </div>
-            <span className="text-red-400 text-sm">-20% sur toute la boutique pour votre première commande</span>
+            <span className="text-red-400 text-sm">-10% sur toute la boutique pour votre première commande</span>
           </div>
         </div>
       </section>

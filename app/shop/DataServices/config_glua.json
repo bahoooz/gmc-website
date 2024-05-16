@@ -2,7 +2,7 @@
   {
     "title": "Optimisation Workshop",
     "description": "Une envie de fraîcheur ? Réduisez le taux d'addons de votre workshop !",
-    "price": "4,99",
+    "price": "6,99",
     "payment_type": "Paiement Unique"
   },
   {
@@ -14,7 +14,7 @@
   {
     "title": "Service d'Optimisation Complet",
     "description": "Un ping élevé ? Des problèmes de réseaux ? Des fps en chute libre ? On s'occupe tout ça !",
-    "price": "24,99",
+    "price": "39,99",
     "payment_type": "Paiement Unique"
   },
   {
@@ -32,7 +32,7 @@
   {
     "title": "Création 40 Jobs",
     "description": "Besoin de 40 métiers ? Vous êtes un expert !",
-    "price": "19,99",
+    "price": "24,99",
     "payment_type": "Paiement Unique"
   },
   {

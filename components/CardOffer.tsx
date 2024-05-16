@@ -5,6 +5,7 @@ import { Card } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
 import { Warning } from "@phosphor-icons/react";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 export default function CardOffer({
   title,
@@ -15,6 +16,7 @@ export default function CardOffer({
   displayBestOffer,
   payment_link,
 }: any) {
+  const { data: session } = useSession();
   return (
     <div className="relative">
       <Card
@@ -37,7 +39,7 @@ export default function CardOffer({
           </span>
         </div>
         <p className="text-violet-600 font-bold text-sm mb-4">
-          -20% de réduction pour votre première commande
+          -10% de réduction pour votre première commande
         </p>
         <h3 className="w-full text-start text-blue-400 font-bold mb-4">
           Cette offre contient :
@@ -49,9 +51,9 @@ export default function CardOffer({
         <div className="mb-8">
           <span className="text-violet-500">Avantages sur le Discord</span>
           <ul className="text-start mt-4 text-violet-500 flex flex-col gap-2">
-            <li>un rôle client à vie</li>
-            <li>un accès à nos futurs giveaways clients</li>
-            <li>un code promotionnel de -25% tous les 3 mois</li>
+            <li>💎 un rôle client à vie</li>
+            <li>💎 un accès à nos futurs giveaways clients</li>
+            <li>💎 un code promotionnel de -20% tous les 3 mois</li>
           </ul>
         </div>
         <div className="flex flex-col items-center gap-2 mb-8">
@@ -63,7 +65,7 @@ export default function CardOffer({
         </div>
         <Button
           as={Link}
-          href={payment_link}
+          href={!session ? "/connexion" : payment_link}
           className="bg-violet-600 text-white text-base mb-8 w-full h-12 flex justify-between"
         >
           Acheter <span>{price}€</span>
