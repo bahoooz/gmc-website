@@ -13,9 +13,10 @@ import DataConfigDiscord from "./DataServices/config_discord.json";
 import { Image } from "@nextui-org/image";
 import { Divider } from "@nextui-org/divider";
 import { Button } from "@nextui-org/button";
+import { useSession } from "next-auth/react";
 
 export default function Shop() {
-
+  const { data: session } = useSession();
   return (
     <>
       <header>
@@ -148,7 +149,11 @@ export default function Shop() {
                         <span className="text-violet-400 text-sm uppercase">
                           {service.payment_type}
                         </span>
-                        <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">
+                        <Button
+                          as={Link}
+                          href={!session ? "/connexion" : service.payment_link}
+                          className="mb-5 w-full bg-red-400 text-white flex justify-between"
+                        >
                           Acheter <span>{service.price}€</span>
                         </Button>
                       </div>

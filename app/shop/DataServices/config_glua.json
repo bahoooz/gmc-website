@@ -3,60 +3,70 @@
     "title": "Optimisation Workshop",
     "description": "Une envie de fraîcheur ? Réduisez le taux d'addons de votre workshop !",
     "price": "6,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/cN2cNmclhgAyb0QcMR"
   },
   {
     "title": "Création Content Workshop",
     "description": "Vous souhaitez publier un addon ? On s'en occupe !",
     "price": "4,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/aEUfZy8514RQed27sy"
   },
   {
     "title": "Service d'Optimisation Complet",
     "description": "Un ping élevé ? Des problèmes de réseaux ? Des fps en chute libre ? On s'occupe tout ça !",
     "price": "39,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/9AQ3cM5WT2JIfh6007"
   },
   {
     "title": "Création 10 Jobs",
     "description": "Besoin de 10 métiers ? Hm, petit joueur...",
     "price": "4,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/4gw28I0Cz842c4U14c"
   },
   {
     "title": "Création 20 Jobs",
     "description": "Besoin de 20 métiers ? Ça devient intéressent.",
     "price": "9,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/3csbJi3OL3NM2ukbIR"
   },
   {
     "title": "Création 40 Jobs",
     "description": "Besoin de 40 métiers ? Vous êtes un expert !",
     "price": "24,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/14kaFe0CzgAy7OEcMW"
   },
   {
     "title": "Configuration 5 Addons/Scripts",
     "description": "Vous avez 5 addons à configurer ? Hm, petit joueur...",
     "price": "4,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/00g14EgBx0BAc4U14f"
   },
   {
     "title": "Configuration 10 Addons/Scripts",
     "description": "Vous avez 10 addons à configurer ? Pourquoi pas..",
     "price": "11,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/8wM7t2clh0BA1qgbIU"
   },
   {
     "title": "Configuration 20 Addons/Scripts",
     "description": "Vous avez 20 addons à configurer ? Ça devient intéressent.",
     "price": "24,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/dR69Baclh8424Cs4gt"
   },
   {
     "title": "Configuration 30 Addons/Scripts",
     "description": "Vous avez 30 addons à configurer ? Vous êtes un expert !",
     "price": "59,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/aEU9Ba4SP4RQ4Cs7sG"
   }
 ]
