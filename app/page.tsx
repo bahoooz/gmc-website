@@ -79,18 +79,7 @@ export default function Home() {
               Découvrir la boutique
             </Button>
           </div>
-          <Link href="https://discord.gg/rvzyZVqdDs" target="_blank">
-            <div className="hidden text-black font-bold lg:flex gap-3 items-center bg-gray-100 bg-opacity-70 h-12 w-72 absolute left-0 pl-12 rounded-tr-full rounded-br-full hover:scale-105 transition-all">
-              <span>Rejoignez nous sur</span>
-              <Image
-                className="w-auto h-6"
-                src="/discord_logo.png"
-                alt="discord logo"
-                width={42}
-                height={35}
-              />
-            </div>
-          </Link>
+
           <div className="w-full flex justify-center mt-20">
             <Link href="#first_content">
               <CaretDown color="white" size={32} />

@@ -15,6 +15,7 @@ import { Divider } from "@nextui-org/divider";
 import { Button } from "@nextui-org/button";
 
 export default function Shop() {
+
   return (
     <>
       <header>

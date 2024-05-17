@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: "Garry's Mod Creators",
     template: `Garry's Mod Creators - Services Gmod`,
   },
-  description: "description",
+  description: "Garry's Mod Creators est l'endroit parfait pour créer votre serveur Garry's Mod a des prix défiant toute concurrence.",
   icons: {
     icon: "/logo_gmc.png",
   },
