@@ -2,31 +2,43 @@
   {
     "title": "Logo",
     "description": "Un logo qualitatif fait avec Illustrator !",
-    "price": "9,99",
-    "payment_type": "Paiement Unique"
+    "price": "14,99",
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/eVa5kU4SP3NM9WM28B"
   },
   {
     "title": "Bannière",
     "description": "Une bannière qualitative faite par nos soins",
     "price": "7,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/14k14E8511FE5GwdRk"
+  },
+  {
+    "title": "Maquette Graphique (interface)",
+    "description": "Une maquette graphique selon ce que vous voulez (site web, addon, demande personnalisée etc...) !",
+    "price": "24,99",
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/8wM5kUdpl2JI1qg6oT"
   },
   {
     "title": "Icône",
     "description": "Une icône selon vos besoins !",
     "price": "9,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/4gw9Ba70X1FE1qg28E"
   },
   {
     "title": "Affiche",
     "description": "Une affiche realisée avec amour !",
     "price": "9,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/5kA8x63OLgAy8SIaFb"
   },
   {
     "title": "Wallpaper",
     "description": "Un wallpaper dans le style que vous voulez, pour vous !",
     "price": "9,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/7sIbJi0Cz3NMgladRo"
   }
 ]

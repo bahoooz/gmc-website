@@ -327,7 +327,7 @@ export default function Shop() {
                     }
                     price="34,99"
                     displayBestOffer={false}
-                    payment_link=""
+                    payment_link="https://buy.stripe.com/fZe5kU2KHckid8Y9B0"
                   />
                   <CardOffer
                     title="Offre Identité Graphique"
@@ -345,7 +345,7 @@ export default function Shop() {
                     price="59,99"
                     outlineColor="xl:outline xl:outline-violet-600 xl:outline-8"
                     displayBestOffer={true}
-                    payment_link=""
+                    payment_link="https://buy.stripe.com/28odRqfxt2JI5GwcNd"
                   />
                   <CardOffer
                     title="Offre Identitée Graphique Complète"
@@ -363,7 +363,7 @@ export default function Shop() {
                     }
                     price="99,99"
                     displayBestOffer={false}
-                    payment_link=""
+                    payment_link="https://buy.stripe.com/3cs9Ba0Cz0BA9WMfZq"
                   />
                 </div>
                 <h3 className="text-center my-16 md:my-32 text-xl text-violet-400 font-bold lg:text-start lg:ml-28 xl:my-48 2xl:ml-56">
@@ -397,7 +397,11 @@ export default function Shop() {
                         <span className="text-violet-400 text-sm uppercase">
                           {service.payment_type}
                         </span>
-                        <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">
+                        <Button
+                          as={Link}
+                          href={!session ? "/connexion" : service.payment_link}
+                          className="mb-5 w-full bg-red-400 text-white flex justify-between"
+                        >
                           Acheter <span>{service.price}€</span>
                         </Button>
                       </div>
