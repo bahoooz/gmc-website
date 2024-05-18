@@ -53,12 +53,6 @@ export default function Home() {
             </div>
             <div className="text-red-400 flex flex-col items-center gap-4">
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-400 bg-opacity-50 rounded-xl flex justify-center items-center">
-                <Gavel className="text-2xl sm:text-3xl" />
-              </div>
-              <span className="text-sm sm:text-base">Mapping</span>
-            </div>
-            <div className="text-green-400 flex flex-col items-center gap-4">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-green-400 bg-opacity-50 rounded-xl flex justify-center items-center">
                 <DiscordLogo className="text-2xl sm:text-3xl" />
               </div>
               <span className="text-sm sm:text-base">Config Discord</span>
@@ -119,8 +113,7 @@ export default function Home() {
                 suivants :{" "}
                 <span className="text-violet-400">développement web</span>,{" "}
                 <span className="text-violet-400">configuration glua</span>,{" "}
-                <span className="text-violet-400">graphisme</span>,{" "}
-                <span className="text-violet-400">mapping</span>, et{" "}
+                <span className="text-violet-400">graphisme</span>, et{" "}
                 <span className="text-violet-400">
                   configuration de serveur discord
                 </span>
@@ -436,23 +429,31 @@ export default function Home() {
           <Divider />
           <div className="text-center lg:py-8">
             <div className="my-16 px-5 sm:relative">
-            <h2 className="text-2xl underline decoration-green-300 decoration-4 underline-offset-4 sm:text-3xl sm:no-underline lg:text-4xl">Vous êtes convaincu ? Rejoignez-nous !</h2>
-            <div className="hidden absolute w-[550px] h-5 bg-green-300 translate-x-[-50%] left-1/2 -bottom-1 sm:flex -z-10 lg:w-[670px] lg:bottom-[-6px] "></div>
+              <h2 className="text-2xl underline decoration-green-300 decoration-4 underline-offset-4 sm:text-3xl sm:no-underline lg:text-4xl">
+                Vous êtes convaincu ? Rejoignez-nous !
+              </h2>
+              <div className="hidden absolute w-[550px] h-5 bg-green-300 translate-x-[-50%] left-1/2 -bottom-1 sm:flex -z-10 lg:w-[670px] lg:bottom-[-6px] "></div>
             </div>
             <div className="flex flex-col px-5 gap-6 mb-6 smallsm:px-8 sm:items-center sm:gap-8 lg:mb-12">
-            <Button className="bg-green-300 flex gap-3 sm:w-[550px]" as={Link} href="/shop">
-              <Basket size={24} /> Découvrir la boutique
-            </Button>
-            <Button
-            className="bg-violet-600 text-white flex gap-3 sm:w-[550px]"
-              as={Link}
-              href="https://discord.gg/rvzyZVqdDs"
-              target="blank"
-            >
-              <DiscordLogo size={24} /> Rejoindre le Discord
-            </Button>
+              <Button
+                className="bg-green-300 flex gap-3 sm:w-[550px]"
+                as={Link}
+                href="/shop"
+              >
+                <Basket size={24} /> Découvrir la boutique
+              </Button>
+              <Button
+                className="bg-violet-600 text-white flex gap-3 sm:w-[550px]"
+                as={Link}
+                href="https://discord.gg/rvzyZVqdDs"
+                target="blank"
+              >
+                <DiscordLogo size={24} /> Rejoindre le Discord
+              </Button>
             </div>
-            <span className="text-red-400 text-sm">-10% sur toute la boutique pour votre première commande</span>
+            <span className="text-red-400 text-sm">
+              -10% sur toute la boutique pour votre première commande
+            </span>
           </div>
         </div>
       </section>
