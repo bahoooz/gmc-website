@@ -519,7 +519,7 @@ export default function Shop() {
                     }
                     price="9,99"
                     displayBestOffer={false}
-                    payment_link=""
+                    payment_link="https://buy.stripe.com/dR66oY1GDdomb0QfZx"
                   />
                   <CardOffer
                     title="Offre Discord"
@@ -536,7 +536,7 @@ export default function Shop() {
                     price="19,99"
                     outlineColor="xl:outline xl:outline-violet-600 xl:outline-8"
                     displayBestOffer={true}
-                    payment_link=""
+                    payment_link="https://buy.stripe.com/fZe28I70Xesq4CscNm"
                   />
                   <CardOffer
                     title="Offre Discord"
@@ -552,7 +552,7 @@ export default function Shop() {
                     }
                     price="29,99"
                     displayBestOffer={false}
-                    payment_link=""
+                    payment_link="https://buy.stripe.com/dR6bJi2KH986d8Y3cN"
                   />
                 </div>
                 <h3 className="text-center my-16 md:my-32 text-xl text-violet-400 font-bold lg:text-start lg:ml-28 xl:my-48 2xl:ml-56">
@@ -586,7 +586,11 @@ export default function Shop() {
                         <span className="text-violet-400 text-sm uppercase">
                           {service.payment_type}
                         </span>
-                        <Button className="mb-5 w-full bg-red-400 text-white flex justify-between">
+                        <Button
+                          as={Link}
+                          href={!session ? "/connexion" : service.payment_link}
+                          className="mb-5 w-full bg-red-400 text-white flex justify-between"
+                        >
                           Acheter <span>{service.price}€</span>
                         </Button>
                       </div>

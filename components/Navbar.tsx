@@ -78,7 +78,7 @@ export default function NavbarComponent() {
                 <p className="font-semibold">Connecté sur</p>
                 <p className="font-semibold">{session.user?.email}</p>
               </DropdownItem>
-              <DropdownItem key="account" href="/user">
+              <DropdownItem key="account" href="/profil">
                 Mon compte
               </DropdownItem>
               <DropdownItem

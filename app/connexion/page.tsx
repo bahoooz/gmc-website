@@ -17,7 +17,7 @@ export default function Connexion() {
         <div className="flex flex-col w-64 mx-auto gap-8 md:w-80 lg:flex-row lg:w-full lg:justify-center lg:gap-14">
           <Button
             className="py-6 border-3 border-red-400 bg-opacity-0 text-red-600 text-base font-bold flex gap-3 hover:scale-105"
-            onClick={() => signIn("google", { callbackUrl: "/user" })}
+            onClick={() => signIn("google", { callbackUrl: "/profil" })}
           >
             Connexion avec
             <Image
@@ -30,7 +30,7 @@ export default function Connexion() {
           </Button>
           <Button
             className="py-6 border-3 border-blue-400 bg-opacity-0 text-blue-600 text-base font-bold flex gap-3 hover:scale-105"
-            onClick={() => signIn("github", { callbackUrl: "/user" })}
+            onClick={() => signIn("github", { callbackUrl: "/profil" })}
           >
             Connexion avec
             <Image
@@ -43,7 +43,7 @@ export default function Connexion() {
           </Button>
           <Button
             className="py-6 border-3 border-violet-400 bg-opacity-0 text-violet-600 text-base font-bold flex gap-3 hover:scale-105"
-            onClick={() => signIn("discord", { callbackUrl: "/user" })}
+            onClick={() => signIn("discord", { callbackUrl: "/profil" })}
           >
             Connexion avec
             <Image
@@ -55,7 +55,13 @@ export default function Connexion() {
             />
           </Button>
         </div>
-        <Image src="/bg-connexion.jpg" width={1920} height={1080} alt="bg garry's mod" className="hidden lg:block mt-24 w-3/4 mx-auto h-56 object-cover xl:mt-32 xl:h-64" />
+        <Image
+          src="/bg-connexion.jpg"
+          width={1920}
+          height={1080}
+          alt="bg garry's mod"
+          className="hidden lg:block mt-24 w-3/4 mx-auto h-56 object-cover xl:mt-32 xl:h-64"
+        />
       </div>
     </>
   );

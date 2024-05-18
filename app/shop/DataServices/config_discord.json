@@ -3,6 +3,7 @@
     "title": "Création de bot Discord personnalisé",
     "description": "Nous vous créeons un bot personnalisé spécialement selon vos besoins !",
     "price": "9,99",
-    "payment_type": "Paiement Unique"
+    "payment_type": "Paiement Unique",
+    "payment_link": "https://buy.stripe.com/00gbJibhd5VU3yoaFg"
   }
 ]
