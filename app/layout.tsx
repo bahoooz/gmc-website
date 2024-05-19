@@ -27,7 +27,9 @@ export default function RootLayout({
   return (
     <SessionWrapper>
       <html lang="fr" suppressHydrationWarning>
-        <head />
+      <head>
+          <link rel="icon" href="/logo_gmc.png" />
+        </head>
         <body className={raleway.className}>
           <NavbarComponent />
           {children}
