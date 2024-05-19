@@ -12,7 +12,12 @@ export default function UserPage() {
     <>
       {!session ? (
         <div className="h-[100svh] flex items-center justify-center">
-          <h1 className="text-center mb-32 text-xl font-bold px-8">Pour accéder à votre profil veuillez vous connecter <Link className="text-blue-400 underline" href="/connexion">ici</Link></h1>
+          <h1 className="text-center mb-32 text-xl font-bold px-8">
+            Pour accéder à votre profil veuillez vous connecter{" "}
+            <Link className="text-blue-400 underline" href="/connexion">
+              ici
+            </Link>
+          </h1>
         </div>
       ) : (
         <div className="h-screen relative">
@@ -23,7 +28,11 @@ export default function UserPage() {
             </h1>
             <div>
               <div className="flex flex-col items-center gap-12 px-5">
-                <h2 className="">Vos informations :</h2>
+                <p className="text-center uppercase text-lg font-bold">
+                  Code promotionnel -10% première commande :{" "}
+                  <span className="text-red-600">GMCWELCOME24</span>
+                </p>
+                <h2>Vos informations :</h2>
                 <div className="flex flex-col gap-2 text-center">
                   <p>
                     Nom :{" "}
