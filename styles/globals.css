@@ -3,9 +3,141 @@
 @tailwind utilities;
 
 * {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
+}
+
+/* ---------- Animations ---------- */
+
+/* Classe de base pour chaque section, avant animation avec intersection observer */
+
+.invisible {
+  display: none;
+}
+
+/* Début d'animation du header */
+
+#header h1 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 0.2s ease-out forwards;
+}
+
+#header #subtext {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 0.4s ease-out forwards;
+}
+
+#header #anim-1 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 0.6s ease-out forwards;
+}
+
+#header #anim-2 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 0.8s ease-out forwards;
+}
+
+#header #anim-3 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 1s ease-out forwards;
+}
+
+#header #anim-4 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 1.2s ease-out forwards;
+}
+
+#header #anim-5 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 1.4s ease-out forwards;
+}
+
+#header #subtext-2 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 1.6s ease-out forwards;
+}
+
+#header #btn-shop {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 1.8s ease-out forwards;
+}
+
+#header #arrow-down {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 2s ease-out forwards;
+}
+
+/* Début d'animation du header */
+
+#header-shop h1 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 0.2s ease-out forwards;
+}
+
+#header-shop #subtext {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 0.4s ease-out forwards;
+}
+
+#header-shop #subtext-2 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 0.6s ease-out forwards;
+}
+
+#header-shop #anim-1 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 0.8s ease-out forwards;
+}
+#header-shop #anim-2 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 1s ease-out forwards;
+}
+#header-shop #anim-3 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 1.2s ease-out forwards;
+}
+#header-shop #anim-4 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 1.4s ease-out forwards;
+}
+
+#header-shop #anim-5 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 1.6s ease-out forwards;
+}
+
+#header-shop #arrow-down {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: apparition 0.4s 1.8s ease-out forwards;
+}
+
+/* Fin d'animation */
+
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }

@@ -44,16 +44,16 @@ export default function CardOffer({
         <h3 className="w-full text-start text-blue-400 font-bold mb-4">
           Cette offre contient :
         </h3>
-        <ul className="text-start text-base mb-8 flex flex-col gap-2">
+        <ul className="text-start text-base mb-8 flex flex-col gap-2 w-full">
           {liste}
         </ul>
         <Divider className="bg-violet-500 mb-8" />
         <div className="mb-8">
           <span className="text-violet-500">Avantages sur le Discord</span>
           <ul className="text-start mt-4 text-violet-500 flex flex-col gap-2">
-            <li>💎 un rôle client à vie</li>
-            <li>💎 un accès à nos futurs giveaways clients</li>
-            <li>💎 un code promotionnel de -20% tous les 3 mois</li>
+            <li>💎 ⠂ un rôle client à vie</li>
+            <li>💎 ⠂ un accès à nos futurs giveaways clients</li>
+            <li>💎 ⠂ un code promotionnel de -20% tous les 3 mois</li>
           </ul>
         </div>
         <div className="flex flex-col items-center gap-2 mb-8">

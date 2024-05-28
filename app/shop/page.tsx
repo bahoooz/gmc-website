@@ -3,7 +3,15 @@
 import CardOffer from "@/components/CardOffer";
 import { Card } from "@nextui-org/card";
 import { Tab, Tabs } from "@nextui-org/tabs";
-import { ArrowDown, ArrowsLeftRight } from "@phosphor-icons/react";
+import {
+  ArrowDown,
+  ArrowsLeftRight,
+  BracketsCurly,
+  Code,
+  DiscordLogo,
+  Gavel,
+  Palette,
+} from "@phosphor-icons/react";
 import Link from "next/link";
 import DataConfigGlua from "./DataServices/config_glua.json";
 import DataDevWeb from "./DataServices/dev_web.json";
@@ -19,19 +27,66 @@ export default function Shop() {
   const { data: session } = useSession();
   return (
     <>
-      <header>
+      <header id="header-shop">
         <div className="relative min-h-screen h-[600px] bg-black bg-opacity-50">
           <h1 className="text-3xl smallsm:text-5xl font-bold text-center pt-16 sm:pt-40 text-white px-5">
             Boutique
           </h1>
-          <p className="text-white text-center text-xl my-6">
+          <p id="subtext" className="text-white text-center text-xl my-6">
             Tous nos services à des prix défiant toute concurrence.
           </p>
-          <p className="text-center text-red-400">
+          <p id="subtext-2" className="text-center text-red-400">
             -10% sur votre première commande
           </p>
+          <div className="flex justify-center items-center mt-16 gap-8 sm:gap-14 text-white flex-wrap px-8">
+            <div
+              id="anim-1"
+              className="text-violet-400 flex flex-col items-center gap-4"
+            >
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-violet-400 bg-opacity-50 rounded-xl flex justify-center items-center">
+                <Code className="text-2xl sm:text-3xl" />
+              </div>
+              <span className="text-sm sm:text-base">Dev Web</span>
+            </div>
+            <div
+              id="anim-2"
+              className="text-orange-400 flex flex-col items-center gap-4"
+            >
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-orange-400 bg-opacity-50 rounded-xl flex justify-center items-center">
+                <BracketsCurly className="text-2xl sm:text-3xl" />
+              </div>
+              <span className="text-sm sm:text-base">Config gLua</span>
+            </div>
+            <div
+              id="anim-3"
+              className="text-blue-400 flex flex-col items-center gap-4"
+            >
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-400 bg-opacity-50 rounded-xl flex justify-center items-center">
+                <Palette className="text-2xl sm:text-3xl" />
+              </div>
+              <span className="text-sm sm:text-base">Graphisme</span>
+            </div>
+            <div
+              id="anim-4"
+              className="text-green-400 flex flex-col items-center gap-4"
+            >
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-green-400 bg-opacity-50 rounded-xl flex justify-center items-center">
+                <Gavel className="text-2xl sm:text-3xl" />
+              </div>
+              <span className="text-sm sm:text-base">Mapping</span>
+            </div>
+            <div
+              id="anim-5"
+              className="text-red-400 flex flex-col items-center gap-4"
+            >
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-400 bg-opacity-50 rounded-xl flex justify-center items-center">
+                <DiscordLogo className="text-2xl sm:text-3xl" />
+              </div>
+              <span className="text-sm sm:text-base">Config Discord</span>
+            </div>
+          </div>
           <div className="flex justify-center">
-            <Link href="#shop">
+            <Link href="#shop" id="arrow-down">
               <ArrowDown
                 size={64}
                 color="white"
@@ -64,7 +119,15 @@ export default function Shop() {
             color="secondary"
             variant="bordered"
           >
-            <Tab key="config_glua" title="Config gLua" className="text-white">
+            <Tab
+              key="config_glua"
+              title={
+                <div className="flex items-center gap-2">
+                  <BracketsCurly size={24} /> <span>Config gLua</span>
+                </div>
+              }
+              className="text-white"
+            >
               <div>
                 <div className="flex flex-wrap justify-center gap-10 px-10 md:gap-20">
                   <CardOffer
@@ -72,9 +135,11 @@ export default function Shop() {
                     info_title="Start"
                     liste={
                       <>
-                        <li>✔️ mise en place de votre serveur Garry's Mod</li>
-                        <li>✔️ création de 15 jobs</li>
-                        <li>✔️ configuration de 10 addons / scripts</li>
+                        <li>
+                          ⭐️ ⠂ mise en place de votre serveur Garry's Mod
+                        </li>
+                        <li>⭐️ ⠂ création de 15 jobs</li>
+                        <li>⭐️ ⠂ configuration de 10 addons / scripts</li>
                       </>
                     }
                     price="29,99"
@@ -86,11 +151,13 @@ export default function Shop() {
                     info_title="Medium"
                     liste={
                       <>
-                        <li>✔️ mise en place de votre serveur Garry's Mod</li>
-                        <li>✔️ création de 30 jobs</li>
-                        <li>✔️ configuration de 20 addons / scripts</li>
-                        <li>✔️ création de content sur le workshop</li>
-                        <li>✔️ optimisation de votre workshop</li>
+                        <li>
+                          ⭐️ ⠂ mise en place de votre serveur Garry's Mod
+                        </li>
+                        <li>⭐️ ⠂ création de 30 jobs</li>
+                        <li>⭐️ ⠂ configuration de 20 addons / scripts</li>
+                        <li>⭐️ ⠂ création de content sur le workshop</li>
+                        <li>⭐️ ⠂ optimisation de votre workshop</li>
                       </>
                     }
                     price="69,99"
@@ -103,14 +170,16 @@ export default function Shop() {
                     info_title="Biggest"
                     liste={
                       <>
-                        <li>✔️ mise en place de votre serveur Garry's Mod</li>
-                        <li>✔️ création de 40 jobs</li>
-                        <li>✔️ configuration de 30 addons / scripts</li>
-                        <li>✔️ création de content sur le workshop </li>
-                        <li>✔️ optimisation de votre workshop</li>
-                        <li>✔️ optimisation réseau de votre serveur</li>
-                        <li>✔️ optimisation du rendu de divers entités</li>
-                        <li>✔️ optimisation du client à la connexion</li>
+                        <li>
+                          ⭐️ ⠂ mise en place de votre serveur Garry's Mod
+                        </li>
+                        <li>⭐️ ⠂ création de 40 jobs</li>
+                        <li>⭐️ ⠂ configuration de 30 addons / scripts</li>
+                        <li>⭐️ ⠂ création de content sur le workshop </li>
+                        <li>⭐️ ⠂ optimisation de votre workshop</li>
+                        <li>⭐️ ⠂ optimisation réseau de votre serveur</li>
+                        <li>⭐️ ⠂ optimisation du rendu de divers entités</li>
+                        <li>⭐️ ⠂ optimisation du client à la connexion</li>
                       </>
                     }
                     price="99,99"
@@ -163,7 +232,15 @@ export default function Shop() {
               </div>
             </Tab>
 
-            <Tab key="dev_web" title="Dev Web" className="text-white">
+            <Tab
+              key="dev_web"
+              title={
+                <div className="flex items-center gap-2">
+                  <Code size={24} /> <span>Dev Web</span>
+                </div>
+              }
+              className="text-white"
+            >
               <div>
                 <div className="flex flex-wrap justify-center gap-10 px-10 md:gap-20">
                   <CardOffer
@@ -172,19 +249,19 @@ export default function Shop() {
                     liste={
                       <>
                         <li>
-                          ✔️ création d'un site internet avec les dernières
+                          ⭐️ ⠂ création d'un site internet avec les dernières
                           technologies
                         </li>
                         <li>
-                          ✔️ une page sous forme de landing page pour présenter
-                          ce que vous désirez
+                          ⭐️ ⠂ une page sous forme de landing page pour
+                          présenter ce que vous désirez
                         </li>
                         <li>
-                          ✔️ une maquette graphique pour le design du site
+                          ⭐️ ⠂ une maquette graphique pour le design du site
                           comprise dans l'offre
                         </li>
                         <li>
-                          ✔️ des animations et une optimisation du site web
+                          ⭐️ ⠂ des animations et une optimisation du site web
                         </li>
                       </>
                     }
@@ -198,25 +275,26 @@ export default function Shop() {
                     liste={
                       <>
                         <li>
-                          ✔️ création d'un site internet avec les dernières
+                          ⭐️ ⠂ création d'un site internet avec les dernières
                           technologies
                         </li>
                         <li>
-                          ✔️ jusqu'à 5 pages selon les besoins de votre site web
+                          ⭐️ ⠂ jusqu'à 5 pages selon les besoins de votre site
+                          web
                         </li>
                         <li>
-                          ✔️ une maquette graphique pour le design du site
+                          ⭐️ ⠂ une maquette graphique pour le design du site
                           comprise dans l'offre
                         </li>
                         <li>
-                          ✔️ des animations et une optimisation du site web
+                          ⭐️ ⠂ des animations et une optimisation du site web
                         </li>
                         <li>
-                          ✔️ possibilités de rajouter un système de connexion,
-                          de boutique etc...
+                          ⭐️ ⠂ possibilités de rajouter un système de
+                          connexion, de boutique etc...
                         </li>
                         <li>
-                          ✔️ une maintenance du site pour seulement 9,99€ par
+                          ⭐️ ⠂ une maintenance du site pour seulement 9,99€ par
                           mois
                         </li>
                       </>
@@ -232,29 +310,29 @@ export default function Shop() {
                     liste={
                       <>
                         <li>
-                          ✔️ création d'un site internet avec les dernières
+                          ⭐️ ⠂ création d'un site internet avec les dernières
                           technologies
                         </li>
                         <li>
-                          ✔️ jusqu'à 10 pages selon les besoins de votre site
+                          ⭐️ ⠂ jusqu'à 10 pages selon les besoins de votre site
                           web
                         </li>
                         <li>
-                          ✔️ une maquette graphique pour le design du site
+                          ⭐️ ⠂ une maquette graphique pour le design du site
                           comprise dans l'offre
                         </li>
                         <li>
-                          ✔️ des animations et une optimisation du site web
+                          ⭐️ ⠂ des animations et une optimisation du site web
                         </li>
                         <li>
-                          ✔️ possibilités de rajouter un système de connexion,
-                          de boutique etc...
+                          ⭐️ ⠂ possibilités de rajouter un système de
+                          connexion, de boutique etc...
                         </li>
                         <li>
-                          ✔️ une maintenance du site pour seulement 9,99€ par
+                          ⭐️ ⠂ une maintenance du site pour seulement 9,99€ par
                           mois
                         </li>
-                        <li>✔️ le nom de domaine offert</li>
+                        <li>⭐️ ⠂ le nom de domaine offert</li>
                       </>
                     }
                     price="149,99"
@@ -307,7 +385,15 @@ export default function Shop() {
               </div>
             </Tab>
 
-            <Tab key="graphisme" title="Graphisme" className="text-white">
+            <Tab
+              key="graphisme"
+              title={
+                <div className="flex items-center gap-2">
+                  <Palette size={24} /> <span>Graphisme</span>
+                </div>
+              }
+              className="text-white"
+            >
               <div>
                 <div className="flex flex-wrap justify-center gap-10 px-10 md:gap-20">
                   <CardOffer
@@ -316,13 +402,13 @@ export default function Shop() {
                     liste={
                       <>
                         <li>
-                          ✔️ création d'un logo avec des simples déclinaisons
+                          ⭐️ ⠂ création d'un logo avec des simples déclinaisons
                         </li>
-                        <li>✔️ création d'une bannière</li>
+                        <li>⭐️ ⠂ création d'une bannière</li>
                         <li>
-                          ✔️ création de 3 affiches en fonction de votre logo
+                          ⭐️ ⠂ création de 3 affiches en fonction de votre logo
                         </li>
-                        <li>✔️ fichier source</li>
+                        <li>⭐️ ⠂ fichier source</li>
                       </>
                     }
                     price="34,99"
@@ -334,12 +420,12 @@ export default function Shop() {
                     info_title="Medium"
                     liste={
                       <>
-                        <li>✔️ création d'une charte graphique complète</li>
-                        <li>✔️ création d'un logo</li>
-                        <li>✔️ création d'une bannière</li>
-                        <li>✔️ création de plusieurs icônes</li>
-                        <li>✔️ création de plusieures affiches</li>
-                        <li>✔️ fichier source</li>
+                        <li>⭐️ ⠂ création d'une charte graphique complète</li>
+                        <li>⭐️ ⠂ création d'un logo</li>
+                        <li>⭐️ ⠂ création d'une bannière</li>
+                        <li>⭐️ ⠂ création de plusieurs icônes</li>
+                        <li>⭐️ ⠂ création de plusieures affiches</li>
+                        <li>⭐️ ⠂ fichier source</li>
                       </>
                     }
                     price="59,99"
@@ -352,13 +438,13 @@ export default function Shop() {
                     info_title="Biggest"
                     liste={
                       <>
-                        <li>✔️ création d'une charte graphique complète</li>
-                        <li>✔️ création d'un logo</li>
-                        <li>✔️ création d'une bannière</li>
-                        <li>✔️ création de plusieurs icônes</li>
-                        <li>✔️ création de plusieures affiches</li>
-                        <li>✔️ maquette graphique pour un site web</li>
-                        <li>✔️ fichier source</li>
+                        <li>⭐️ ⠂ création d'une charte graphique complète</li>
+                        <li>⭐️ ⠂ création d'un logo</li>
+                        <li>⭐️ ⠂ création d'une bannière</li>
+                        <li>⭐️ ⠂ création de plusieurs icônes</li>
+                        <li>⭐️ ⠂ création de plusieures affiches</li>
+                        <li>⭐️ ⠂ maquette graphique pour un site web</li>
+                        <li>⭐️ ⠂ fichier source</li>
                       </>
                     }
                     price="99,99"
@@ -377,7 +463,58 @@ export default function Shop() {
                     >
                       <div className="flex flex-col">
                         <Image
-                          src="/graphisme_img_card.png"
+                          src={service.img}
+                          alt={service.title}
+                          width="100%"
+                          height={338}
+                          className="w-full h-[200px] object-cover"
+                        />
+                        <span className="my-5 text-red-400 px-5">
+                          {service.title}
+                        </span>
+                      </div>
+                      <div className="flex flex-col items-center">
+                        <Divider className="mb-5 w-4/5" />
+                        <p className="px-5 mb-5 text-sm">
+                          {service.description}
+                        </p>
+                      </div>
+                      <div className="px-5 flex flex-col gap-5">
+                        <span className="text-violet-400 text-sm uppercase">
+                          {service.payment_type}
+                        </span>
+                        <Button
+                          as={Link}
+                          href={!session ? "/connexion" : service.payment_link}
+                          className="mb-5 w-full bg-red-400 text-white flex justify-between"
+                        >
+                          Acheter <span>{service.price}€</span>
+                        </Button>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </Tab>
+            <Tab
+              key="mapping"
+              title={
+                <div className="flex items-center gap-2">
+                  <Gavel size={24} /> <span>Mapping</span>
+                </div>
+              }
+              className="text-white"
+            >
+              <div>
+                <div className="flex flex-wrap justify-center gap-24 px-12 md:px-16 lg:gap-32">
+                  {DataMapping.map((service: any, index: any) => (
+                    <Card
+                      key={index}
+                      className="w-64 text-center shadow-xl shadow-black flex flex-col justify-between"
+                    >
+                      <div className="flex flex-col">
+                        <Image
+                          src={service.img}
                           alt={service.title}
                           width="100%"
                           height={225}
@@ -410,7 +547,14 @@ export default function Shop() {
                 </div>
               </div>
             </Tab>
-            <Tab key="config_discord" title="Config Discord">
+            <Tab
+              key="config_discord"
+              title={
+                <div className="flex items-center gap-2">
+                  <DiscordLogo size={24} /> <span>Config Discord</span>
+                </div>
+              }
+            >
               <div>
                 <div className="flex flex-wrap justify-center gap-10 px-10 md:gap-20">
                   <CardOffer
@@ -418,10 +562,10 @@ export default function Shop() {
                     info_title="Start"
                     liste={
                       <>
-                        <li>✔️ création d'un serveur discord</li>
-                        <li>✔️ création de jusqu'à 15 rôles</li>
-                        <li>✔️ création de jusqu'à 20 salons</li>
-                        <li>✔️ configuration de jusqu'à 2 bots</li>
+                        <li>⭐️ ⠂ création d'un serveur discord</li>
+                        <li>⭐️ ⠂ création de jusqu'à 15 rôles</li>
+                        <li>⭐️ ⠂ création de jusqu'à 20 salons</li>
+                        <li>⭐️ ⠂ configuration de jusqu'à 2 bots</li>
                       </>
                     }
                     price="9,99"
@@ -433,11 +577,11 @@ export default function Shop() {
                     info_title="Medium"
                     liste={
                       <>
-                        <li>✔️ création d'un serveur discord</li>
-                        <li>✔️ création de jusqu'à 20 rôles</li>
-                        <li>✔️ création de jusqu'à 30 salons</li>
-                        <li>✔️ configuration de jusqu'à 5 bots</li>
-                        <li>✔️ création d'un bot personnalisé</li>
+                        <li>⭐️ ⠂ création d'un serveur discord</li>
+                        <li>⭐️ ⠂ création de jusqu'à 20 rôles</li>
+                        <li>⭐️ ⠂ création de jusqu'à 30 salons</li>
+                        <li>⭐️ ⠂ configuration de jusqu'à 5 bots</li>
+                        <li>⭐️ ⠂ création d'un bot personnalisé</li>
                       </>
                     }
                     price="19,99"
@@ -450,11 +594,11 @@ export default function Shop() {
                     info_title="Biggest"
                     liste={
                       <>
-                        <li>✔️ création d'un serveur discord</li>
-                        <li>✔️ création de jusqu'à 30 rôles</li>
-                        <li>✔️ création de jusqu'à 50 salons</li>
-                        <li>✔️ configuration de jusqu'à 8 bots</li>
-                        <li>✔️ création d'un bot personnalisé</li>
+                        <li>⭐️ ⠂ création d'un serveur discord</li>
+                        <li>⭐️ ⠂ création de jusqu'à 30 rôles</li>
+                        <li>⭐️ ⠂ création de jusqu'à 50 salons</li>
+                        <li>⭐️ ⠂ configuration de jusqu'à 8 bots</li>
+                        <li>⭐️ ⠂ création d'un bot personnalisé</li>
                       </>
                     }
                     price="29,99"

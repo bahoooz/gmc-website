@@ -23,35 +23,56 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <header>
+      <header id="header">
         <div className="relative min-h-screen h-[800px] bg-black bg-opacity-50">
           <h1 className="text-3xl smallsm:text-5xl font-bold text-center pt-16 sm:pt-40 text-white px-5">
             Garry’s Mod Creators
           </h1>
-          <p className="text-white text-center text-xl mt-6">
+          <p id="subtext" className="text-white text-center text-xl mt-6">
             Construisez ce dont vous rêvez
           </p>
 
           <div className="flex justify-center items-center mt-16 gap-8 sm:gap-14 text-white flex-wrap px-8">
-            <div className="text-violet-400 flex flex-col items-center gap-4">
+            <div
+              id="anim-1"
+              className="text-violet-400 flex flex-col items-center gap-4"
+            >
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-violet-400 bg-opacity-50 rounded-xl flex justify-center items-center">
                 <Code className="text-2xl sm:text-3xl" />
               </div>
               <span className="text-sm sm:text-base">Dev Web</span>
             </div>
-            <div className="text-orange-400 flex flex-col items-center gap-4">
+            <div
+              id="anim-2"
+              className="text-orange-400 flex flex-col items-center gap-4"
+            >
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-orange-400 bg-opacity-50 rounded-xl flex justify-center items-center">
                 <BracketsCurly className="text-2xl sm:text-3xl" />
               </div>
               <span className="text-sm sm:text-base">Config gLua</span>
             </div>
-            <div className="text-blue-400 flex flex-col items-center gap-4">
+            <div
+              id="anim-3"
+              className="text-blue-400 flex flex-col items-center gap-4"
+            >
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-400 bg-opacity-50 rounded-xl flex justify-center items-center">
                 <Palette className="text-2xl sm:text-3xl" />
               </div>
               <span className="text-sm sm:text-base">Graphisme</span>
             </div>
-            <div className="text-red-400 flex flex-col items-center gap-4">
+            <div
+              id="anim-4"
+              className="text-green-400 flex flex-col items-center gap-4"
+            >
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-green-400 bg-opacity-50 rounded-xl flex justify-center items-center">
+                <Gavel className="text-2xl sm:text-3xl" />
+              </div>
+              <span className="text-sm sm:text-base">Mapping</span>
+            </div>
+            <div
+              id="anim-5"
+              className="text-red-400 flex flex-col items-center gap-4"
+            >
               <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-400 bg-opacity-50 rounded-xl flex justify-center items-center">
                 <DiscordLogo className="text-2xl sm:text-3xl" />
               </div>
@@ -59,12 +80,16 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="text-white text-center mt-7 text-xs px-5">
+          <p
+            id="subtext-2"
+            className="text-white text-center mt-7 text-xs px-5"
+          >
             Les services que nous proposons actuellement, ces services sont
             susceptibles d’évoluer.
           </p>
           <div className="w-full flex justify-center">
             <Button
+              id="btn-shop"
               className="bg-violet-600 bg-opacity-50 text-white mt-14"
               as={Link}
               href="/shop"
@@ -75,7 +100,7 @@ export default function Home() {
           </div>
 
           <div className="w-full flex justify-center mt-20">
-            <Link href="#first_content">
+            <Link href="#first_content" id="arrow-down">
               <CaretDown color="white" size={32} />
             </Link>
           </div>

@@ -4,41 +4,47 @@
     "description": "Un logo qualitatif fait avec Illustrator !",
     "price": "14,99",
     "payment_type": "Paiement Unique",
-    "payment_link": "https://buy.stripe.com/eVa5kU4SP3NM9WM28B"
+    "payment_link": "https://buy.stripe.com/eVa5kU4SP3NM9WM28B",
+    "img": "/services-img/graphisme/logo.png"
   },
   {
     "title": "Bannière",
     "description": "Une bannière qualitative faite par nos soins",
     "price": "7,99",
     "payment_type": "Paiement Unique",
-    "payment_link": "https://buy.stripe.com/14k14E8511FE5GwdRk"
+    "payment_link": "https://buy.stripe.com/14k14E8511FE5GwdRk",
+    "img": "/services-img/graphisme/bannière.png"
   },
   {
     "title": "Maquette Graphique (interface)",
     "description": "Une maquette graphique selon ce que vous voulez (site web, addon, demande personnalisée etc...) !",
     "price": "24,99",
     "payment_type": "Paiement Unique",
-    "payment_link": "https://buy.stripe.com/8wM5kUdpl2JI1qg6oT"
+    "payment_link": "https://buy.stripe.com/8wM5kUdpl2JI1qg6oT",
+    "img": "/services-img/graphisme/interface.png"
   },
   {
     "title": "Icône",
     "description": "Une icône selon vos besoins !",
     "price": "9,99",
     "payment_type": "Paiement Unique",
-    "payment_link": "https://buy.stripe.com/4gw9Ba70X1FE1qg28E"
+    "payment_link": "https://buy.stripe.com/4gw9Ba70X1FE1qg28E",
+    "img": "/services-img/graphisme/icônes.png"
   },
   {
     "title": "Affiche",
     "description": "Une affiche realisée avec amour !",
     "price": "9,99",
     "payment_type": "Paiement Unique",
-    "payment_link": "https://buy.stripe.com/5kA8x63OLgAy8SIaFb"
+    "payment_link": "https://buy.stripe.com/5kA8x63OLgAy8SIaFb",
+    "img": "/graphisme_img_card.png"
   },
   {
     "title": "Wallpaper",
     "description": "Un wallpaper dans le style que vous voulez, pour vous !",
     "price": "9,99",
     "payment_type": "Paiement Unique",
-    "payment_link": "https://buy.stripe.com/7sIbJi0Cz3NMgladRo"
+    "payment_link": "https://buy.stripe.com/7sIbJi0Cz3NMgladRo",
+    "img": "/services-img/graphisme/wallpaper.png"
   }
 ]

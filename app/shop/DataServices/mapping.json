@@ -1,30 +1,34 @@
 [
   {
-    "title": "Modification de map rôleplay",
-    "description": "",
-    "price": "",
+    "title": "Optimisation",
+    "description": "Optimisez votre map, sans plus attendre !",
+    "price": "99,99",
     "payment_type": "Paiement Unique",
-    "payment_link": ""
+    "payment_link": "",
+    "img": "/services-img/mapping/optimisation.png"
   },
   {
-    "title": "Modification de bâtiment",
-    "description": "",
-    "price": "",
+    "title": "Re-Design",
+    "description": "Votre map à besoin d'un coup de peinture ?",
+    "price": "49,99",
     "payment_type": "Paiement Unique",
-    "payment_link": ""
+    "payment_link": "",
+    "img": "/services-img/mapping/re-design.png"
   },
   {
-    "title": "Optimisation de bâtiment",
-    "description": "",
-    "price": "",
+    "title": "Création Bâtiment",
+    "description": "Une envie de re-nouveau ?",
+    "price": "29,99",
     "payment_type": "Paiement Unique",
-    "payment_link": ""
+    "payment_link": "",
+    "img": "/services-img/mapping/creation-batiment.png"
   },
   {
-    "title": "Optimisation complète",
-    "description": "",
-    "price": "",
+    "title": "Création de A à Z ?",
+    "description": "Vous voyez grand ?",
+    "price": "299,99",
     "payment_type": "Paiement Unique",
-    "payment_link": ""
+    "payment_link": "",
+    "img": "/services-img/mapping/creation-a-z.png"
   }
 ]
