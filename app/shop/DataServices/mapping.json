@@ -4,7 +4,7 @@
     "description": "Optimisez votre map, sans plus attendre !",
     "price": "99,99",
     "payment_type": "Paiement Unique",
-    "payment_link": "",
+    "payment_link": "https://buy.stripe.com/7sI00Aclhdomb0Q28L",
     "img": "/services-img/mapping/optimisation.png"
   },
   {
@@ -12,7 +12,7 @@
     "description": "Votre map à besoin d'un coup de peinture ?",
     "price": "49,99",
     "payment_type": "Paiement Unique",
-    "payment_link": "",
+    "payment_link": "https://buy.stripe.com/eVa00A3OL9862ukbJm",
     "img": "/services-img/mapping/re-design.png"
   },
   {
@@ -20,7 +20,7 @@
     "description": "Une envie de re-nouveau ?",
     "price": "29,99",
     "payment_type": "Paiement Unique",
-    "payment_link": "",
+    "payment_link": "https://buy.stripe.com/8wM6oY851esq9WM4gV",
     "img": "/services-img/mapping/creation-batiment.png"
   },
   {
@@ -28,7 +28,7 @@
     "description": "Vous voyez grand ?",
     "price": "299,99",
     "payment_type": "Paiement Unique",
-    "payment_link": "",
+    "payment_link": "https://buy.stripe.com/14k9Ba1GDcki9WMfZE",
     "img": "/services-img/mapping/creation-a-z.png"
   }
 ]
